@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الميزات - Tiles WMS</title>
+  <meta name="description"
+    content="استكشف أهم ميزات Tiles WMS للمخزون والمبيعات والمشتريات والتقارير وإدارة المستودعات." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/shared.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+        <span class="nav-logo-text">Tiles <span>WMS</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="features.html">الميزات</a></li>
+        <li><a href="pricing.html">الأسعار</a></li>
+        <li><a href="customers.html">العملاء</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><a href="http://localhost:8080/login" class="btn-login">تسجيل الدخول</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="features.html">الميزات</a>
+      <a href="pricing.html">الأسعار</a>
+      <a href="customers.html">العملاء</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="http://localhost:5173" class="btn-login-mobile">تسجيل الدخول</a>
+    </div>
+  </nav>
+
+  <section class="hero-bg"
+    style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+    <div class="hero-mesh"></div>
+    <div class="container" style="position:relative;">
+      <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;">مجموعة
+        ميزات متكاملة</div>
+      <h1 style="font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:#fff; margin-bottom:1rem;">كل ما تحتاجه
+        لإدارة<br /><span style="color:#60a5fa;">مستودع البلاط بكفاءة</span></h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:580px; margin:0 auto 2rem;">من المخزون وحتى
+        التقارير، يوفّر Tiles WMS أدوات عملية لفِرَق التشغيل والمبيعات والمالية.</p>
+      <a href="http://localhost:8080/login" class="btn btn-primary btn-lg">ابدأ التجربة المجانية</a>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="tab-nav reveal">
+        <button class="tab-btn active" data-tab="tab-inventory">المخزون</button>
+        <button class="tab-btn" data-tab="tab-sales">المبيعات</button>
+        <button class="tab-btn" data-tab="tab-purchase">المشتريات</button>
+        <button class="tab-btn" data-tab="tab-reports">التقارير</button>
+      </div>
+
+      <div id="tab-inventory" class="tab-content active">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">رؤية دقيقة للمخزون</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">تابع كل صنف وكل رف وكل مستودع من شاشة واحدة.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>تتبع لحظي للكميات المتاحة والمحجوزة والتالفة.</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>توزيع تلقائي على الرفوف وتحويلات بين المستودعات.</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>تنبيهات عند انخفاض المخزون وسجل كامل للحركات.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="assets/images/inventory.png" alt="Inventory Management"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-sales" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">دورة مبيعات واضحة</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">من أمر البيع وحتى الفاتورة والتحصيل.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>أوامر بيع وقوائم التقاط وأذونات تسليم.</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>فواتير GST ومرتجعات المبيعات وإشعارات الدائن.</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                <div>إدارة العملاء والحدود الائتمانية وسجل الدفعات.</div>
+              </li>
+            </ul>
+            <div class="alt-visual" style="padding:0; overflow:hidden;">
+              <img src="assets/images/bis_guidelines.jpg" alt="Compliance Pipeline"
+                style="width:100%; height:100%; object-fit:cover; display:block;" />
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-purchase" class="tab-content">
+          <div class="grid-2" style="gap:3rem; align-items:center;">
+            <div>
+              <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">إدارة مشتريات منظمة</h3>
+              <p class="section-sub" style="margin-bottom:1.5rem;">أوامر شراء وGRN ومدفوعات الموردين ضمن تدفق واحد.</p>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+                <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                  <div>إصدار PO وتسجيل الاستلام وتحديث المخزون تلقائيًا.</div>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                  <div>مرتجعات موردين وإشعارات مدين عند الحاجة.</div>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                  <div>ملفات موردين وشروط دفع واستيراد CSV.</div>
+                </li>
+              </ul>
+              <div class="alt-visual" style="padding:0; overflow:hidden;">
+                <img src="assets/images/quality_control.jpg" alt="Quality Control"
+                  style="width:100%; height:100%; object-fit:cover; display:block;" />
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-reports" class="tab-content">
+            <div class="grid-2" style="gap:3rem; align-items:center;">
+              <div>
+                <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">تقارير قابلة للتنفيذ</h3>
+                <p class="section-sub" style="margin-bottom:1.5rem;">تقارير مالية وتشغيلية جاهزة للمراجعة والمشاركة.</p>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+                  <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                    <div>تقارير GST وGSTR-1 وملخصات HSN.</div>
+                  </li>
+                  <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                    <div>تقارير الإيرادات والتقادم وحركة المخزون.</div>
+                  </li>
+                  <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span style="color:#0e9f6e;">✓</span>
+                    <div>تصدير سريع إلى PDF وCSV.</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="alt-visual" style="padding:0; overflow:hidden;">
+                <img src="assets/images/dashboard.png" alt="Reports Dashboard"
+                  style="width:100%; height:100%; object-fit:cover; display:block;" />
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label">لماذا تختارنا</div>
+        <h2 class="section-title">منصة واحدة <span>لكل فريقك</span></h2>
+        <p class="section-sub">تصميم مناسب للتشغيل اليومي مع دعم للضرائب الهندية وتعدد المستودعات.</p>
+      </div>
+      <div class="feature-grid" style="margin-top:2.5rem;">
+        <div class="card reveal">
+          <div class="card-icon icon-blue"><i class="ph-duotone ph-receipt" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">امتثال GST</h3>
+          <p style="color:#64748b;">حسابات ضريبية تلقائية وتقارير جاهزة للتقديم والمراجعة.</p>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon icon-amber"><i class="ph-duotone ph-users" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">صلاحيات حسب الدور</h3>
+          <p style="color:#64748b;">كل مستخدم يرى ما يحتاجه فقط، من فريق المستودع إلى الإدارة.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon icon-green"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">عدة مستودعات</h3>
+          <p style="color:#64748b;">تابع العمليات عبر أكثر من موقع مع رؤية مركزية كاملة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section"
+    style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('assets/images/warehouse_operations.png') center/cover fixed;">
+    <div class="container">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem); font-weight:800; color:#fff; margin-bottom:1rem;">هل تريد رؤية
+          النظام أثناء العمل؟</h2>
+        <p
+          style="color:rgba(255,255,255,0.7); font-size:1.05rem; margin-bottom:2rem; max-width:480px; margin-left:auto; margin-right:auto;">
+          جرّب Tiles WMS مجانًا لمدة 14 يومًا، بدون بطاقة ائتمان وبدون التزام طويل.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="http://localhost:5173" class="btn btn-primary btn-lg">ابدأ التجربة المجانية</a>
+          <a href="pricing.html" class="btn btn-outline btn-lg">عرض الأسعار</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div><span class="nav-logo-text">Tiles <span>WMS</span></span>
+        </a>
+        <p>نظام إدارة المستودعات الكامل المصمم خصيصًا لقطاع البلاط والسيراميك في الهند.</p>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem;"><span class="badge badge-blue">متوافق مع GST</span><span
+            class="badge badge-green">جاهز للسوق الهندية</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>المنتج</h4><a href="features.html">الميزات</a><a href="pricing.html">الأسعار</a><a href="customers.html">قصص
+          النجاح</a><a href="http://localhost:5173">تسجيل الدخول</a>
+      </div>
+      <div class="footer-col">
+        <h4>الشركة</h4><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a><a href="#">المدونة</a><a
+          href="#">الوظائف</a>
+      </div>
+      <div class="footer-col">
+        <h4>الدعم</h4><a href="#">التوثيق</a><a href="#">مركز المساعدة</a><a href="contact.html">تحدث إلى المبيعات</a><a
+          href="#">مرجع API</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tiles WMS. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:1rem;"><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">سياسة الخصوصية</a><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">شروط الخدمة</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+</body>
+
+</html>

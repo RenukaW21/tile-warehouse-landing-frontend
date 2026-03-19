@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiles WMS — Warehouse Management System for Tiles Businesses</title>
+  <meta name="description" content="The complete warehouse management system built for the tiles industry. Manage inventory, sales, purchases, GST, and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1a3a5c', 'navy-deep': '#112038',
+            'tw-blue': '#3b82f6', amber: '#f59e0b', 'tw-green': '#0e9f6e',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+      <span class="nav-logo-text">Tiles <span>WMS</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="http://localhost:8080/login" class="btn-login">Login →</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="features.html">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="customers.html">Customers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="http://localhost:8080/login" class="btn-login-mobile">Login →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero-bg" style="padding: 6rem 1.5rem 5rem; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('../assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+  <div class="hero-mesh"></div>
+  <div class="container" style="position:relative; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+    <div>
+      <div class="badge badge-blue mb-2"><i class="ph-duotone ph-flag" style="color:#138808; font-size:1.6em;"></i> Built for India's Tiles Industry</div>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.25rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:1.25rem;">
+        The Complete <span style="color:#60a5fa;">Warehouse System</span><br/>for Tiles Businesses
+      </h1>
+      <p style="color:rgba(255,255,255,0.72); font-size:1.1rem; line-height:1.75; max-width:480px; margin-bottom:2rem;">
+        Streamline inventory, track orders, manage GST compliance, and run your tiles warehouse operations from a single intelligent platform.
+      </p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="http://localhost:8080/login" class="btn btn-primary btn-lg">Start Free Trial →</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">▶ Watch Demo</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:1.5rem; margin-top:2rem; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.6); font-size:0.875rem;">
+          <span style="color:#0e9f6e;">✓</span> No credit card required
+        </div>
+        <div style="display:flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.6); font-size:0.875rem;">
+          <span style="color:#0e9f6e;">✓</span> 14-day free trial
+        </div>
+        <div style="display:flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.6); font-size:0.875rem;">
+          <span style="color:#0e9f6e;">✓</span> GST compliant
+        </div>
+      </div>
+    </div>
+    <!-- Dashboard mockup -->
+    <div class="animate-float" style="max-width:520px; margin-left:auto;">
+      <div class="dashboard-mockup">
+        <div class="mockup-bar">
+          <div class="mockup-dot" style="background:#ff5f57;"></div>
+          <div class="mockup-dot" style="background:#ffbd2e;"></div>
+          <div class="mockup-dot" style="background:#27c93f;"></div>
+          <span style="margin-left:0.5rem; font-size:0.65rem; color:rgba(255,255,255,0.3);">Tiles WMS Dashboard</span>
+        </div>
+        <div style="display:flex; gap:0.75rem;">
+          <div class="mockup-sidebar">
+            <div style="font-size:0.5rem; color:rgba(255,255,255,0.3); margin-bottom:0.5rem; font-weight:600;">MENU</div>
+            <div class="mockup-sidebar-item active"></div>
+            <div class="mockup-sidebar-item"></div>
+            <div class="mockup-sidebar-item"></div>
+            <div class="mockup-sidebar-item"></div>
+            <div class="mockup-sidebar-item"></div>
+            <div class="mockup-sidebar-item"></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-kpi-row">
+              <div class="mockup-kpi"><div class="mockup-kpi-val">₹24.5L</div><div class="mockup-kpi-lbl">Monthly Revenue</div></div>
+              <div class="mockup-kpi"><div class="mockup-kpi-val">1,482</div><div class="mockup-kpi-lbl">Products</div></div>
+              <div class="mockup-kpi"><div class="mockup-kpi-val">38</div><div class="mockup-kpi-lbl">Orders Today</div></div>
+            </div>
+            <div class="mockup-kpi-row">
+              <div class="mockup-kpi"><div class="mockup-kpi-val">6</div><div class="mockup-kpi-lbl">Warehouses</div></div>
+              <div class="mockup-kpi" style="flex:2;"><div class="mockup-kpi-val" style="color:#f59e0b;">12</div><div class="mockup-kpi-lbl">Low Stock Alerts</div></div>
+            </div>
+            <div class="mockup-chart">
+              <div class="mockup-bar-item" style="height:40%;"></div>
+              <div class="mockup-bar-item" style="height:65%;"></div>
+              <div class="mockup-bar-item" style="height:50%;"></div>
+              <div class="mockup-bar-item" style="height:80%;"></div>
+              <div class="mockup-bar-item" style="height:60%;"></div>
+              <div class="mockup-bar-item" style="height:90%; opacity:1;"></div>
+              <div class="mockup-bar-item" style="height:70%; background:#f59e0b;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-grid .animate-float { display: none; }
+    }
+  </style>
+</section>
+
+<!-- ═══════════════════════════ STATS BAR ═══════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-counter data-target="500" data-suffix="+">0</div>
+      <div class="stat-label">Products Managed</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-number" data-counter data-target="50" data-suffix="+">0</div>
+      <div class="stat-label">Warehouses Powered</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-number" data-counter data-target="10000" data-suffix="+">0</div>
+      <div class="stat-label">Orders Processed</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-number" data-counter data-target="99.9" data-suffix="%" data-prefix="">0</div>
+      <div class="stat-label">Uptime Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
+<section class="section" id="features" style="background:#fff;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label"><i class="ph-duotone ph-lightning" style="font-size:1.6em;"></i> Core Features</div>
+      <h2 class="section-title">Everything your tiles business needs</h2>
+      <p class="section-sub">From raw inventory to customer invoices — Tiles WMS handles every part of your warehouse operation.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="card reveal">
+        <div class="card-icon icon-blue"><i class="ph-duotone ph-package" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Smart Inventory Control</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Track every tile SKU across racks and warehouses. Auto-rack assignment, stock transfers, damage entries, and real-time stock ledger.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon icon-amber"><i class="ph-duotone ph-shopping-cart" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Sales Management</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Sales orders, pick lists, delivery challans, GST invoices, and sales returns — complete order-to-cash cycle.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon icon-navy"><i class="ph-duotone ph-truck" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Purchase Management</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Purchase orders, Goods Receipt Notes (GRN), purchase returns, and vendor payment tracking in one unified system.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon icon-green"><i class="ph-duotone ph-wallet" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Financial Tracking</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Payments received and made, credit/debit notes, aging reports. Know your cash position at all times.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon icon-blue"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Multi-Warehouse Support</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Manage multiple warehouses, zones, and racks. Rack-level inventory tracking with visual layouts and occupancy views.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon icon-amber"><i class="ph-duotone ph-chart-bar" style="font-size:1.6em;"></i></div>
+        <h3 style="font-size:1.1rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">GST Reports & Compliance</h3>
+        <p style="color:#64748b; font-size:0.9rem; line-height:1.6;">Automated GST calculations with HSN codes, GSTIN management, GST reports, and revenue analytics — all audit-ready.</p>
+        <a href="features.html" style="color:#3b82f6; font-size:0.875rem; font-weight:600; text-decoration:none; margin-top:0.75rem; display:inline-block;">Learn more →</a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+      <a href="features.html" class="btn btn-outline-navy">Explore All Features →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+<section class="section" id="how-it-works" style="background:#f8fafc;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label"><i class="ph-duotone ph-rocket" style="font-size:1.6em;"></i> Getting Started</div>
+      <h2 class="section-title">Up and running in <span>minutes</span></h2>
+      <p class="section-sub">No complex setup. No IT team required. Just log in and start managing your warehouse.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-number">1</div>
+        <div class="step-title">Set Up Your Warehouse</div>
+        <p class="step-desc">Configure your warehouses, racks, and product categories. Import your existing product list via CSV in minutes.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-number">2</div>
+        <div class="step-title">Add Products & Stock</div>
+        <p class="step-desc">Add your tile products with HSN codes, GST rates, pricing, and initial stock. Assign them to specific racks automatically.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-number">3</div>
+        <div class="step-title">Start Selling & Tracking</div>
+        <p class="step-desc">Create sales orders, generate invoices, track payments, and get real-time reports — all from one dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ TESTIMONIALS (preview) ═══════════════════════════ -->
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label"><i class="ph-duotone ph-chat-circle-dots" style="font-size:1.6em;"></i> Customer Stories</div>
+      <h2 class="section-title">Trusted by tiles businesses <span>across India</span></h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"Tiles WMS transformed how we manage our 3 warehouses. Stock discrepancies dropped to zero and our team loves the simple interface."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RS</div>
+          <div>
+            <div class="author-name">Ramesh Sharma</div>
+            <div class="author-role">MD, Sharma Tiles Pvt Ltd, Jaipur</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"The GST report generation alone saves us 2 days every month. Invoicing is instant and the aging report helps us chase payments proactively."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PG</div>
+          <div>
+            <div class="author-name">Priya Gupta</div>
+            <div class="author-role">CFO, Gujarat Tiles Distribution, Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★☆</div>
+        <p class="testimonial-quote">"We switched from manual Excel sheets to Tiles WMS 6 months ago. Our order fulfilment speed improved by 40% and errors are almost nil."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div>
+            <div class="author-name">Arun Kumar</div>
+            <div class="author-role">Owner, AK Ceramics, Hyderabad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;" class="reveal">
+      <a href="customers.html" class="btn btn-outline-navy">Read All Stories →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CTA ═══════════════════════════ -->
+<section class="cta-section" style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('../assets/images/warehouse_operations.png') center/cover fixed;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1.25rem;"><i class="ph-duotone ph-target" style="font-size:1.6em;"></i> Get Started Today</div>
+      <h2 style="font-size:clamp(1.75rem,4vw,2.75rem); font-weight:800; color:#fff; margin-bottom:1rem;">Ready to transform your warehouse?</h2>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:520px; margin:0 auto 2rem;">Join 200+ tiles businesses already using Tiles WMS. Start your free 14-day trial today — no credit card required.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="http://localhost:8080/login" class="btn btn-primary btn-lg" style="animation: pulse-glow 2s infinite;">Start Free Trial →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+        <span class="nav-logo-text">Tiles <span>WMS</span></span>
+      </a>
+      <p>The complete warehouse management system built specifically for India's tiles and ceramics industry.</p>
+      <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <span class="badge badge-blue">GST Compliant</span>
+        <span class="badge badge-green">India Ready</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="customers.html">Case Studies</a>
+      <a href="http://localhost:8080/login">Login</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Documentation</a>
+      <a href="#">Help Center</a>
+      <a href="contact.html">Talk to Sales</a>
+      <a href="#">API Reference</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Tiles WMS. All rights reserved.</span>
+    <div style="display:flex; gap:1rem;">
+      <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">Privacy Policy</a>
+      <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — Tiles WMS</title>
+  <meta name="description"
+    content="Explore all features of Tiles WMS — inventory, sales, purchase, finance, reports, and multi-warehouse management." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+        <span class="nav-logo-text">Tiles <span>WMS</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="http://localhost:8080/login" class="btn-login">Login →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="customers.html">Customers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="http://localhost:5173" class="btn-login-mobile">Login →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg"
+    style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('../assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+    <div class="hero-mesh"></div>
+    <div class="container" style="position:relative;">
+      <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;"><i class="ph-duotone ph-lightning" style="font-size:1.6em;"></i>
+        Complete Feature Set</div>
+      <h1 style="font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:#fff; margin-bottom:1rem;">Everything you need
+        to run<br /><span style="color:#60a5fa;">your tiles warehouse</span></h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:580px; margin:0 auto 2rem;">A feature-rich WMS
+        built ground-up for the tiles and ceramics industry — not a generic system bolted on.</p>
+      <a href="http://localhost:8080/login" class="btn btn-primary btn-lg">Start Free Trial →</a>
+    </div>
+  </section>
+
+  <!-- TABS SECTION -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="tab-nav reveal">
+        <button class="tab-btn active" data-tab="tab-inventory"><i class="ph-duotone ph-package" style="font-size:1.6em;"></i> Inventory</button>
+        <button class="tab-btn" data-tab="tab-sales"><i class="ph-duotone ph-shopping-cart" style="font-size:1.6em;"></i> Sales & Orders</button>
+        <button class="tab-btn" data-tab="tab-purchase"><i class="ph-duotone ph-truck" style="font-size:1.6em;"></i> Purchase</button>
+        <button class="tab-btn" data-tab="tab-finance"><i class="ph-duotone ph-wallet" style="font-size:1.6em;"></i> Finance</button>
+        <button class="tab-btn" data-tab="tab-reports"><i class="ph-duotone ph-chart-bar" style="font-size:1.6em;"></i> Reports</button>
+        <button class="tab-btn" data-tab="tab-warehouse"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i> Warehouse</button>
+      </div>
+
+      <!-- Inventory Tab -->
+      <div id="tab-inventory" class="tab-content active">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Intelligent Inventory Control</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">Complete visibility over every tile, every SKU, every
+              rack. Never lose track of stock again.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Real-time stock tracking</strong> — Live inventory levels per
+                  product, per rack, per warehouse</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Auto-rack assignment</strong> — Automatically assigns incoming stock
+                  to available racks</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Stock transfers</strong> — Move inventory between warehouses or
+                  racks with full audit trail</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Damage entries</strong> — Log and track damaged inventory separately
+                  from usable stock</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Stock counts & reconciliation</strong> — Cycle counts with variance
+                  reporting</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Stock ledger</strong> — Full chronological history of every stock
+                  movement</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Low stock alerts</strong> — Automated notifications when inventory
+                  drops below threshold</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Product catalog</strong> — Rich product details with images, HSN
+                  codes, and category management</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="../assets/images/inventory.png" alt="Inventory Management Dashboard"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Sales Tab -->
+      <div id="tab-sales" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Complete Sales Workflow</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">From order creation to payment collection — every step
+              automated and tracked.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Sales Orders</strong> — Create and manage sales orders with
+                  multi-item support and customer credit checks</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Pick Lists</strong> — Auto-generated pick lists for warehouse staff
+                  with rack locations</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Delivery Challans</strong> — Print-ready delivery challans with
+                  vehicle and driver info</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">GST Invoices</strong> — Auto-calculated GST invoices with
+                  CGST/SGST/IGST breakdown</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Sales Returns</strong> — Process returns with stock adjustment and
+                  credit note generation</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Customer Management</strong> — Complete customer profiles with
+                  credit limits, payment history, and CSV import</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="../assets/images/bis_guidelines.jpg" alt="Compliance Pipeline"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Purchase Tab -->
+      <div id="tab-purchase" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Streamlined Purchase Process</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">Manage vendor relationships and procurement from PO to
+              GRN to payment.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Purchase Orders</strong> — Create and send POs to vendors with
+                  itemized tiles list and delivery schedule</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Goods Receipt Notes (GRN)</strong> — Record stock receipt, verify
+                  quantities, and auto-update inventory</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Purchase Returns</strong> — Return defective or excess stock to
+                  vendors with debit note generation</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Vendor Management</strong> — Full vendor profiles, GSTIN
+                  verification, payment terms, and CSV import</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Vendor Payments</strong> — Track payments made against invoices,
+                  outstanding balances, and payment schedule</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="../assets/images/quality_control.jpg" alt="Procurement Quality Control"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Finance Tab -->
+      <div id="tab-finance" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Full Financial Visibility</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">Know exactly where your money is at all times —
+              receivables, payables, and everything in between.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Payments Received</strong> — Log customer payments, partial
+                  payments, and advance payments</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Payments Made</strong> — Track vendor payments with bank reference
+                  and payment mode</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Credit Notes</strong> — Issue credit notes for sales returns or
+                  adjustments</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Debit Notes</strong> — Generate debit notes for purchase returns or
+                  vendor claims</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Aging Report</strong> — See outstanding receivables and payables by
+                  age bucket</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="../assets/images/analytics.jpg" alt="Financial Analytics Dashboard"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reports Tab -->
+      <div id="tab-reports" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Business Intelligence & Reports
+            </h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">Make smarter decisions with real-time dashboards and
+              one-click GST-ready reports.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">GST Report</strong> — GSTR-1 ready reports with HSN summary,
+                  invoice-wise data, and tax breakdowns</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Revenue Report</strong> — Monthly, quarterly, and annual revenue
+                  trends by product, category, or customer</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Aging Report</strong> — Receivables and payables by 0–30, 31–60,
+                  60–90, 90+ day buckets</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Inventory Reports</strong> — Stock summary, movement, slow-moving
+                  items, and valuation reports</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">PDF & CSV Export</strong> — Export all reports to PDF or CSV for
+                  accountants and auditors</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual" style="padding:0; overflow:hidden;">
+            <img src="../assets/images/dashboard.png" alt="Reports Dashboard"
+              style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Warehouse Tab -->
+      <div id="tab-warehouse" class="tab-content">
+        <div class="grid-2" style="gap:3rem; align-items:center;">
+          <div>
+            <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Multi-Warehouse Management</h3>
+            <p class="section-sub" style="margin-bottom:1.5rem;">Manage any number of warehouses, zones, and racks from
+              a single login.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Multiple Warehouses</strong> — Add unlimited warehouses with
+                  locations, capacity, and zone mapping</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Rack Management</strong> — Define racks with dimensions, capacity,
+                  and product type mapping</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Rack Inventory</strong> — See exactly which products are on which
+                  rack at any moment</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">Auto-Rack Assignment</strong> — AI-powered automatic placement of
+                  incoming stock to optimal racks</div>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:0.75rem;"><span
+                  style="color:#0e9f6e; font-size:1.1rem; margin-top:1px;">✓</span>
+                <div><strong style="color:#1a3a5c;">User Role Management</strong> — Assign warehouse-specific roles and
+                  restrict access by location</div>
+              </li>
+            </ul>
+          </div>
+          <div class="alt-visual">
+            <div class="alt-visual-inner">
+              <span class="alt-visual-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></span>
+              <div class="alt-visual-title">Warehouse Network</div>
+              <div style="margin-top:0.75rem; display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+                <div
+                  style="background:#fff; border-radius:8px; padding:0.6rem; border:1px solid #e2e8f0; text-align:left;">
+                  <div style="font-size:0.6rem; color:#64748b;">WH-1 Mumbai</div>
+                  <div style="font-size:0.8rem; font-weight:700; color:#0e9f6e;">● Active</div>
+                  <div style="font-size:0.7rem; color:#1a3a5c;">24 Racks · 82% full</div>
+                </div>
+                <div
+                  style="background:#fff; border-radius:8px; padding:0.6rem; border:1px solid #e2e8f0; text-align:left;">
+                  <div style="font-size:0.6rem; color:#64748b;">WH-2 Pune</div>
+                  <div style="font-size:0.8rem; font-weight:700; color:#0e9f6e;">● Active</div>
+                  <div style="font-size:0.7rem; color:#1a3a5c;">16 Racks · 60% full</div>
+                </div>
+                <div
+                  style="background:#fff; border-radius:8px; padding:0.6rem; border:1px solid #e2e8f0; text-align:left;">
+                  <div style="font-size:0.6rem; color:#64748b;">WH-3 Nashik</div>
+                  <div style="font-size:0.8rem; font-weight:700; color:#f59e0b;">● Moderate</div>
+                  <div style="font-size:0.7rem; color:#1a3a5c;">12 Racks · 45% full</div>
+                </div>
+                <div
+                  style="background:#fff; border-radius:8px; padding:0.6rem; border:1px solid #e2e8f0; text-align:left;">
+                  <div style="font-size:0.6rem; color:#64748b;">WH-4 Nagpur</div>
+                  <div style="font-size:0.8rem; font-weight:700; color:#3b82f6;">● New</div>
+                  <div style="font-size:0.7rem; color:#1a3a5c;">8 Racks · 15% full</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTERNATING FEATURE HIGHLIGHTS -->
+  <section class="section" style="background:#f8fafc; padding-top:2rem;">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem;">
+        <div class="section-label">🌟 Highlights</div>
+        <h2 class="section-title">Why tiles businesses <span>choose us</span></h2>
+      </div>
+
+      <div class="alt-row reveal">
+        <div>
+          <div class="section-label"><i class="ph-duotone ph-flag" style="color:#138808; font-size:1.6em;"></i> India-First Design</div>
+          <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Built for Indian Tax Compliance</h3>
+          <p style="color:#64748b; line-height:1.8; margin-bottom:1rem;">Every feature is designed with Indian GST in
+            mind. CGST, SGST, IGST calculations are automatic. HSN code mapping, GSTIN validation, and GSTR-ready
+            reports mean you're always audit-ready.</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> Auto
+              CGST/SGST/IGST calculations</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> HSN code
+              management</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> GSTIN validation
+              for buyers & vendors</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> GSTR-1 ready
+              invoice reports</li>
+          </ul>
+        </div>
+        <div class="alt-visual">
+          <div class="alt-visual-inner">
+            <span class="alt-visual-icon"><i class="ph-duotone ph-receipt" style="font-size:1.6em;"></i></span>
+            <div class="alt-visual-title">GST Invoice Preview</div>
+            <div
+              style="margin-top:0.75rem; background:#fff; border-radius:8px; padding:1rem; border:1px solid #e2e8f0; text-align:left; font-size:0.8rem;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;"><span
+                  style="color:#64748b;">Subtotal</span><span style="font-weight:600;">₹45,000</span></div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;"><span
+                  style="color:#64748b;">CGST (9%)</span><span style="font-weight:600;">₹4,050</span></div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;"><span
+                  style="color:#64748b;">SGST (9%)</span><span style="font-weight:600;">₹4,050</span></div>
+              <div
+                style="border-top:1px solid #e2e8f0; padding-top:0.4rem; display:flex; justify-content:space-between;">
+                <span style="font-weight:700; color:#1a3a5c;">Total</span><span
+                  style="font-weight:800; color:#1a3a5c;">₹53,100</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alt-row reverse reveal">
+        <div>
+          <div class="section-label"><i class="ph-duotone ph-users" style="font-size:1.6em;"></i> Team-Ready</div>
+          <h3 class="section-title" style="font-size:1.75rem; margin-bottom:1rem;">Multi-User Role Management</h3>
+          <p style="color:#64748b; line-height:1.8; margin-bottom:1rem;">Give each team member exactly the access they
+            need. Warehouse staff see stock. Sales team sees orders. Finance team sees accounts. You see everything.</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> Role-based access
+              control</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span>
+              Warehouse-specific permissions</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> Activity audit
+              trail</li>
+            <li style="color:#64748b; display:flex; gap:0.5rem;"><span style="color:#0e9f6e;">✓</span> Secure JWT
+              authentication</li>
+          </ul>
+        </div>
+        <div class="alt-visual" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);">
+          <div class="alt-visual-inner">
+            <span class="alt-visual-icon"><i class="ph-duotone ph-users" style="font-size:1.6em;"></i></span>
+            <div class="alt-visual-title">Team Members</div>
+            <div style="margin-top:0.75rem; display:flex; flex-direction:column; gap:0.4rem;">
+              <div
+                style="background:#fff; border-radius:8px; padding:0.5rem 0.75rem; display:flex; gap:0.75rem; align-items:center; border:1px solid #e2e8f0;">
+                <div
+                  style="width:28px;height:28px;background:linear-gradient(135deg,#3b82f6,#1a3a5c);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.65rem;font-weight:700;">
+                  AD</div>
+                <div>
+                  <div style="font-size:0.8rem;font-weight:600;color:#1a3a5c;">Admin</div>
+                  <div style="font-size:0.65rem;color:#64748b;">Full Access</div>
+                </div>
+              </div>
+              <div
+                style="background:#fff; border-radius:8px; padding:0.5rem 0.75rem; display:flex; gap:0.75rem; align-items:center; border:1px solid #e2e8f0;">
+                <div
+                  style="width:28px;height:28px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.65rem;font-weight:700;">
+                  SM</div>
+                <div>
+                  <div style="font-size:0.8rem;font-weight:600;color:#1a3a5c;">Sales Manager</div>
+                  <div style="font-size:0.65rem;color:#64748b;">Sales + Invoices</div>
+                </div>
+              </div>
+              <div
+                style="background:#fff; border-radius:8px; padding:0.5rem 0.75rem; display:flex; gap:0.75rem; align-items:center; border:1px solid #e2e8f0;">
+                <div
+                  style="width:28px;height:28px;background:linear-gradient(135deg,#0e9f6e,#047857);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.65rem;font-weight:700;">
+                  WS</div>
+                <div>
+                  <div style="font-size:0.8rem;font-weight:600;color:#1a3a5c;">Warehouse Staff</div>
+                  <div style="font-size:0.65rem;color:#64748b;">Inventory Only</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section"
+    style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('../assets/images/warehouse_operations.png') center/cover fixed;">
+    <div class="container">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem); font-weight:800; color:#fff; margin-bottom:1rem;">Ready to see
+          it in action?</h2>
+        <p
+          style="color:rgba(255,255,255,0.7); font-size:1.05rem; margin-bottom:2rem; max-width:480px; margin-left:auto; margin-right:auto;">
+          Try Tiles WMS free for 14 days. No credit card. No commitments. Just results.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="http://localhost:5173" class="btn btn-primary btn-lg">Start Free Trial →</a>
+          <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div><span class="nav-logo-text">Tiles <span>WMS</span></span>
+        </a>
+        <p>The complete warehouse management system built specifically for India's tiles and ceramics industry.</p>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem;"><span class="badge badge-blue">GST Compliant</span><span
+            class="badge badge-green">India Ready</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a
+          href="customers.html">Case Studies</a><a href="http://localhost:5173">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="#">Blog</a><a
+          href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4><a href="#">Documentation</a><a href="#">Help Center</a><a href="contact.html">Talk to
+          Sales</a><a href="#">API Reference</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tiles WMS. All rights reserved.</span>
+      <div style="display:flex;gap:1rem;"><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">Privacy Policy</a><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">Terms of Service</a></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/shared.js"></script>
+</body>
+
+</html>
