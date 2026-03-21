@@ -67,6 +67,222 @@
     }
   }
 
+  function ensureHomeLinks() {
+    const currentPage = getCurrentPage();
+    const homeLabel = isArabicPage() ? '\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629' : 'Home';
+    const homeHref = 'index.html';
+    const desktopNav = document.querySelector('.nav-links');
+    const mobileMenuRoot = document.getElementById('mobileMenu');
+
+    if (desktopNav && !desktopNav.querySelector(`a[href="${homeHref}"]`)) {
+      const firstItem = desktopNav.querySelector('li');
+      const homeItem = document.createElement('li');
+      const homeLink = document.createElement('a');
+      homeLink.href = homeHref;
+      homeLink.textContent = homeLabel;
+      homeItem.appendChild(homeLink);
+
+      if (firstItem) {
+        desktopNav.insertBefore(homeItem, firstItem);
+      } else {
+        desktopNav.appendChild(homeItem);
+      }
+    }
+
+    if (mobileMenuRoot && !mobileMenuRoot.querySelector(`a[href="${homeHref}"]`)) {
+      const firstLink = mobileMenuRoot.querySelector('a');
+      const homeLink = document.createElement('a');
+      homeLink.href = homeHref;
+      homeLink.textContent = homeLabel;
+
+      if (firstLink) {
+        mobileMenuRoot.insertBefore(homeLink, firstLink);
+      } else {
+        mobileMenuRoot.appendChild(homeLink);
+      }
+    }
+  }
+
+  function syncBrandFavicon() {
+    const iconPath = window.location.pathname.includes('/en/')
+      ? '../assets/svg/data-warehouse.png'
+      : 'assets/svg/data-warehouse.png';
+
+    document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
+
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/png';
+    favicon.href = iconPath;
+    document.head.appendChild(favicon);
+  }
+
+  function normalizeText(value) {
+    return (value || '').replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+
+  function replaceLeadingIcon(target, iconClass) {
+    if (!target || !iconClass) {
+      return;
+    }
+
+    Array.from(target.children).forEach((child) => {
+      if (child.classList?.contains('ui-icon') || child.tagName === 'I') {
+        child.remove();
+      }
+    });
+
+    const icon = document.createElement('span');
+    icon.className = `ui-icon ui-icon-lg ${iconClass}`;
+    icon.setAttribute('aria-hidden', 'true');
+    target.prepend(icon);
+    target.classList.add('has-ui-icon');
+  }
+
+  function getIconFromHref(href) {
+    const path = (href || '').toLowerCase();
+
+    if (!path || path.startsWith('http')) {
+      return '';
+    }
+
+    if (path.includes('features')) {
+      return 'ui-icon-data';
+    }
+    if (path.includes('pricing')) {
+      return 'ui-icon-notebook';
+    }
+    if (path.includes('contact')) {
+      return 'ui-icon-contact';
+    }
+    if (path.includes('about') || path.includes('customers')) {
+      return 'ui-icon-vision';
+    }
+    if (path.includes('login')) {
+      return 'ui-icon-warehouse';
+    }
+
+    return '';
+  }
+
+  function getIconFromText(text) {
+    if (!text) {
+      return '';
+    }
+
+    if (
+      text.includes('contact') ||
+      text.includes('sales') ||
+      text.includes('support') ||
+      text.includes('message') ||
+      text.includes('talk') ||
+      text.includes('\u062a\u0648\u0627\u0635\u0644') ||
+      text.includes('\u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a') ||
+      text.includes('\u0631\u0633\u0627\u0644\u0629') ||
+      text.includes('\u0627\u0644\u062f\u0639\u0645')
+    ) {
+      return 'ui-icon-contact';
+    }
+
+    if (
+      text.includes('pricing') ||
+      text.includes('faq') ||
+      text.includes('compare') ||
+      text.includes('plan') ||
+      text.includes('\u0627\u0644\u0623\u0633\u0639\u0627\u0631') ||
+      text.includes('\u0627\u0644\u0623\u0633\u0626\u0644\u0629') ||
+      text.includes('\u0627\u0644\u062e\u0637\u0629') ||
+      text.includes('\u0642\u0627\u0631\u0646')
+    ) {
+      return 'ui-icon-notebook';
+    }
+
+    if (
+      text.includes('vision') ||
+      text.includes('review') ||
+      text.includes('customer') ||
+      text.includes('story') ||
+      text.includes('team') ||
+      text.includes('about') ||
+      text.includes('\u0631\u0624\u064a\u062a') ||
+      text.includes('\u0627\u0644\u0639\u0645\u0644\u0627\u0621') ||
+      text.includes('\u0642\u0635\u0635') ||
+      text.includes('\u0627\u0644\u0641\u0631\u064a\u0642') ||
+      text.includes('\u0645\u0646 \u0646\u062d\u0646') ||
+      text.includes('\u0627\u0644\u0645\u0631\u0627\u062c\u0639\u0627\u062a')
+    ) {
+      return 'ui-icon-vision';
+    }
+
+    if (
+      text.includes('feature') ||
+      text.includes('dashboard') ||
+      text.includes('control') ||
+      text.includes('highlight') ||
+      text.includes('quick start') ||
+      text.includes('inventory') ||
+      text.includes('\u0627\u0644\u0645\u064a\u0632\u0627\u062a') ||
+      text.includes('\u0644\u0648\u062d\u0629') ||
+      text.includes('\u0627\u0644\u0628\u062f\u0621') ||
+      text.includes('\u0627\u0644\u0645\u062e\u0632\u0648\u0646') ||
+      text.includes('\u0644\u0645\u0627\u0630\u0627 \u062a\u062e\u062a\u0627\u0631\u0646\u0627')
+    ) {
+      return 'ui-icon-data';
+    }
+
+    if (
+      text.includes('demo') ||
+      text.includes('watch') ||
+      text.includes('\u0631\u0624\u064a\u0629') ||
+      text.includes('\u0634\u0627\u0647\u062f')
+    ) {
+      return 'ui-icon-vision';
+    }
+
+    if (
+      text.includes('login') ||
+      text.includes('trial') ||
+      text.includes('\u0627\u0628\u062f\u0623') ||
+      text.includes('\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644')
+    ) {
+      return 'ui-icon-warehouse';
+    }
+
+    return '';
+  }
+
+  function decorateUi() {
+    document.querySelectorAll('a.btn:not(.btn-login):not(.btn-login-mobile)').forEach((button) => {
+      const href = button.getAttribute('href') || '';
+      const iconClass = getIconFromHref(href) || getIconFromText(normalizeText(button.textContent));
+      if (iconClass) {
+        replaceLeadingIcon(button, iconClass);
+      }
+    });
+
+    document.querySelectorAll('.section-label, .badge').forEach((label) => {
+      const iconClass = getIconFromText(normalizeText(label.textContent));
+      if (iconClass) {
+        replaceLeadingIcon(label, iconClass);
+      }
+    });
+
+    document.querySelectorAll('.tab-btn').forEach((button) => {
+      const tab = (button.dataset.tab || '').toLowerCase();
+      let iconClass = 'ui-icon-notebook';
+
+      if (tab.includes('inventory')) {
+        iconClass = 'ui-icon-data';
+      } else if (tab.includes('warehouse')) {
+        iconClass = 'ui-icon-warehouse';
+      } else if (tab.includes('sales') || tab.includes('purchase') || tab.includes('finance') || tab.includes('reports')) {
+        iconClass = 'ui-icon-notebook';
+      }
+
+      replaceLeadingIcon(button, iconClass);
+    });
+  }
+
   function updateNavbarShadow() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -554,7 +770,10 @@
   function initPage() {
     bindGlobals();
     history.replaceState({ url: `${window.location.pathname}${window.location.search}${window.location.hash}` }, '', window.location.href);
+    syncBrandFavicon();
+    ensureHomeLinks();
     syncLanguageSwitchers();
+    decorateUi();
     setupMobileMenu();
     updateActiveNav();
     setupSmoothAnchors();
@@ -569,3 +788,5 @@
 
   document.addEventListener('DOMContentLoaded', initPage);
 })();
+
+
