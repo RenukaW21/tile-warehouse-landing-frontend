@@ -105,14 +105,16 @@
 
   function syncBrandFavicon() {
     const iconPath = window.location.pathname.includes('/en/')
-      ? '../assets/svg/data-warehouse.png'
-      : 'assets/svg/data-warehouse.png';
+      // ? '../assets/svg/data-warehouse.png'
+      // : 'assets/svg/data-warehouse.png';
+      ? '../public/favicon.svg'
+      : 'public/favicon.svg';
 
     document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
-    favicon.type = 'image/png';
+    favicon.type = 'image/svg+xml';
     favicon.href = iconPath;
     document.head.appendChild(favicon);
   }
@@ -545,7 +547,7 @@
       button.disabled = true;
       button.textContent = messages.sending;
 
-      fetch('http://localhost/mail_tileswarehouse/send-email.php', {
+      fetch('http://localhost/tile-warehouse-landing-frontend/mail_smtp/send-email.php', {
         method: 'POST',
         body: formData
       })
