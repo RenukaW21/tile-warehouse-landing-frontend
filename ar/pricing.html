@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الأسعار - Tiles WMS</title>
+  <meta name="description" content="خطط أسعار واضحة ومرنة لنظام Tiles WMS. اختر الخطة المناسبة لحجم أعمالك." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+        <span class="nav-logo-text">Tiles <span>WMS</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="features.html">الميزات</a></li>
+        <li><a href="pricing.html">الأسعار</a></li>
+        <li><a href="customers.html">العملاء</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><a href="http://localhost:8080/login?force=true" class="btn-login">تسجيل الدخول</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="features.html">الميزات</a>
+      <a href="pricing.html">الأسعار</a>
+      <a href="customers.html">العملاء</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="http://localhost:8080/login?force=true" class="btn-login-mobile">تسجيل الدخول</a>
+    </div>
+  </nav>
+
+  <section class="hero-bg" style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('../assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+    <div class="hero-mesh"></div>
+    <div class="container" style="position:relative;">
+      <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;">الأسعار
+      </div>
+      <h1 style="font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:#fff; margin-bottom:1rem;">أسعار <span
+          style="color:#60a5fa;">واضحة</span> تنمو مع أعمالك</h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:520px; margin:0 auto;">بدون رسوم خفية وبدون
+        عمولات على المعاملات. خطة مناسبة لفريقك اليوم وقابلة للتوسع غدًا.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <div class="toggle-wrap reveal" style="display:none;">
+        <span class="toggle-label active" id="label-monthly">شهري</span>
+        <button class="toggle-switch" id="priceToggle" aria-label="تبديل دورة الفوترة"></button>
+        <span class="toggle-label" id="label-annual">سنوي <span class="discount-badge">وفّر 20%</span></span>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div>
+            <div class="badge badge-blue" style="margin-bottom:0.75rem;">خطة البداية</div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:#1a3a5c;">للشركات الصغيرة</h3>
+            <div class="pricing-price">
+              ₹3,999 <span class="per">/ شهريًا</span>
+            </div>
+            <p style="color:#64748b; font-size:0.875rem; margin-bottom:0.5rem;">مناسبة للفرق التي تبدأ العمل على نظام
+              موحد.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✓</span> مستودع واحد</li>
+            <li><span class="check-icon">✓</span> حتى 500 منتج</li>
+            <li><span class="check-icon">✓</span> حسابان للمستخدمين</li>
+            <li><span class="check-icon">✓</span> أوامر البيع والشراء</li>
+            <li><span class="check-icon">✓</span> فواتير GST</li>
+            <li><span class="check-icon">✓</span> تتبع أساسي للمخزون</li>
+            <li><span class="check-icon">✓</span> دعم عبر البريد الإلكتروني</li>
+            <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">إدارة عدة مستودعات</span></li>
+            <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">تقارير متقدمة</span></li>
+            <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">استيراد CSV</span></li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-navy" style="width:100%; justify-content:center;">تواصل مع
+            المبيعات</a>
+        </div>
+
+        <div class="pricing-card popular reveal reveal-delay-1">
+          <div class="popular-badge">الأكثر طلبًا</div>
+          <div>
+            <div class="badge" style="background:rgba(59,130,246,0.15); color:#3b82f6; margin-bottom:0.75rem;">الخطة
+              الاحترافية</div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:#1a3a5c;">للشركات المتنامية</h3>
+            <div class="pricing-price" style="color:#3b82f6;">
+              ₹7,999 <span class="per">/ شهريًا</span>
+            </div>
+            <p style="color:#64748b; font-size:0.875rem; margin-bottom:0.5rem;">أفضل خيار للشركات التي تحتاج إلى توسع
+              أسرع وتقارير متقدمة.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✓</span> حتى 5 مستودعات</li>
+            <li><span class="check-icon">✓</span> منتجات غير محدودة</li>
+            <li><span class="check-icon">✓</span> 10 حسابات مستخدمين</li>
+            <li><span class="check-icon">✓</span> دورة بيع كاملة: أوامر وتسليم وفواتير</li>
+            <li><span class="check-icon">✓</span> دورة شراء كاملة: PO وGRN والمرتجعات</li>
+            <li><span class="check-icon">✓</span> تقارير GST جاهزة لـ GSTR-1</li>
+            <li><span class="check-icon">✓</span> تقارير الإيرادات وتقادم الذمم</li>
+            <li><span class="check-icon">✓</span> استيراد CSV للمنتجات والعملاء</li>
+            <li><span class="check-icon">✓</span> توزيع تلقائي على الرفوف</li>
+            <li><span class="check-icon">✓</span> دعم أولوية عبر البريد والدردشة</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">تواصل مع
+            المبيعات</a>
+        </div>
+
+        <div class="pricing-card reveal reveal-delay-2">
+          <div>
+            <div class="badge badge-amber" style="margin-bottom:0.75rem;">خطة المؤسسات</div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:#1a3a5c;">للعمليات الكبيرة</h3>
+            <div class="pricing-price">
+              سعر مخصص
+            </div>
+            <p style="color:#64748b; font-size:0.875rem; margin-bottom:0.5rem;">حل مرن مخصص حسب عدد المواقع والتكاملات
+              المطلوبة.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check-icon">✓</span> مستودعات غير محدودة</li>
+            <li><span class="check-icon">✓</span> منتجات غير محدودة</li>
+            <li><span class="check-icon">✓</span> مستخدمون غير محدودين</li>
+            <li><span class="check-icon">✓</span> كل ما في الخطة الاحترافية</li>
+            <li><span class="check-icon">✓</span> تكاملات مخصصة وواجهة API</li>
+            <li><span class="check-icon">✓</span> مدير حساب مخصص</li>
+            <li><span class="check-icon">✓</span> اتفاقية مستوى خدمة 99.9%</li>
+            <li><span class="check-icon">✓</span> تدريب وتهيئة داخل الموقع</li>
+            <li><span class="check-icon">✓</span> منشئ تقارير مخصص</li>
+            <li><span class="check-icon">✓</span> دعم هاتفي وبريدي على مدار الساعة</li>
+          </ul>
+          <a href="contact.html" class="btn btn-amber" style="width:100%; justify-content:center;">تواصل مع المبيعات</a>
+        </div>
+      </div>
+
+      <p style="text-align:center; color:#64748b; font-size:0.875rem; margin-top:1.5rem;" class="reveal">
+        جميع الخطط تشمل تجربة مجانية لمدة 14 يومًا بدون الحاجة إلى بطاقة ائتمان.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff; padding-top:2rem;">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title" style="margin-bottom:0.5rem;">قارن <span>كل الميزات</span></h2>
+        <p class="section-sub">شاهد بالضبط ما تتضمنه كل خطة.</p>
+      </div>
+      <div style="overflow-x:auto; margin-top:2rem;" class="reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="text-align:right; width:40%;">الميزة</th>
+              <th>البداية</th>
+              <th class="popular-col">الاحترافية</th>
+              <th>المؤسسات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4"
+                style="background:#f8fafc; font-weight:700; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; padding-right:1.25rem;">
+                المخزون</td>
+            </tr>
+            <tr>
+              <td>المنتجات / SKU</td>
+              <td>500</td>
+              <td class="popular-col">غير محدود</td>
+              <td>غير محدود</td>
+            </tr>
+            <tr>
+              <td>المستودعات</td>
+              <td>1</td>
+              <td class="popular-col">5</td>
+              <td>غير محدود</td>
+            </tr>
+            <tr>
+              <td>الرفوف والمناطق</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>التوزيع التلقائي على الرفوف</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>تحويلات المخزون</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>سجلات التلف</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>جرد المخزون</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td colspan="4"
+                style="background:#f8fafc; font-weight:700; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; padding-right:1.25rem;">
+                المبيعات</td>
+            </tr>
+            <tr>
+              <td>أوامر البيع</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>قوائم الالتقاط</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>أذونات التسليم</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>فواتير GST</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>مرتجعات المبيعات</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td colspan="4"
+                style="background:#f8fafc; font-weight:700; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; padding-right:1.25rem;">
+                المالية والتقارير</td>
+            </tr>
+            <tr>
+              <td>تقارير GST</td>
+              <td>أساسية</td>
+              <td class="popular-col">كاملة (GSTR-1)</td>
+              <td>مخصصة</td>
+            </tr>
+            <tr>
+              <td>تقارير الإيرادات</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>تقارير تقادم الذمم</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>تصدير PDF / CSV</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td colspan="4"
+                style="background:#f8fafc; font-weight:700; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; padding-right:1.25rem;">
+                الفريق والدعم</td>
+            </tr>
+            <tr>
+              <td>المستخدمون</td>
+              <td>2</td>
+              <td class="popular-col">10</td>
+              <td>غير محدود</td>
+            </tr>
+            <tr>
+              <td>صلاحيات حسب الدور</td>
+              <td>نعم</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>استيراد CSV</td>
+              <td>—</td>
+              <td class="popular-col">نعم</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>الوصول إلى API</td>
+              <td>—</td>
+              <td class="popular-col">—</td>
+              <td>نعم</td>
+            </tr>
+            <tr>
+              <td>الدعم</td>
+              <td>بريد إلكتروني</td>
+              <td class="popular-col">بريد + دردشة</td>
+              <td>هاتف 24/7</td>
+            </tr>
+            <tr>
+              <td>SLA</td>
+              <td>—</td>
+              <td class="popular-col">99.5%</td>
+              <td>99.9%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f8fafc;">
+    <div class="container" style="max-width:760px;">
+      <div class="text-center reveal">
+        <div class="section-label">الأسئلة الشائعة</div>
+        <h2 class="section-title" style="margin-bottom:0.5rem;">أسئلة <span>متكررة</span></h2>
+      </div>
+      <div style="margin-top:2rem;">
+        <div class="faq-item reveal">
+          <button class="faq-q">هل يمكنني تغيير الخطة لاحقًا؟ <span class="faq-icon">+</span></button>
+          <div class="faq-a">نعم، يمكنك الترقية أو التخفيض في أي وقت. الترقية تُفعّل مباشرة، أما التخفيض فيبدأ مع دورة
+            الفوترة التالية.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">هل بياناتي آمنة ويتم أخذ نسخ احتياطية لها؟ <span class="faq-icon">+</span></button>
+          <div class="faq-a">بالتأكيد. نقوم بنسخ احتياطي يومي تلقائي، ونخزن البيانات بشكل مشفر، ونستخدم بنية تحتية
+            بمستوى المؤسسات. ويمكنك تصدير بياناتك متى شئت.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">هل تدعمون أكثر من رقم GSTIN؟ <span class="faq-icon">+</span></button>
+          <div class="faq-a">نعم، الخطتان الاحترافية وخطة المؤسسات تدعمان عدة أرقام GSTIN مرتبطة بمواقع مستودعات مختلفة،
+            وهو أمر مهم للشركات العاملة في أكثر من ولاية هندية.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">ماذا يحدث بعد انتهاء التجربة المجانية لمدة 14 يومًا؟ <span
+              class="faq-icon">+</span></button>
+          <div class="faq-a">بعد انتهاء التجربة يمكنك اختيار أي خطة مدفوعة أو ترك التجربة تنتهي. نحتفظ ببياناتك لمدة 30
+            يومًا بعد ذلك في حال قررت الاشتراك، بدون أي رسوم تلقائية.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">هل يمكنني استيراد بيانات المنتجات والعملاء الحالية؟ <span
+              class="faq-icon">+</span></button>
+          <div class="faq-a">نعم. الخطتان الاحترافية وخطة المؤسسات تدعمان استيراد CSV للمنتجات والعملاء والموردين، كما
+            يمكن لفريقنا مساعدتك في ترحيل البيانات من نظامك الحالي أو من ملفات Excel.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">هل توجد رسوم إعداد أو تهيئة؟ <span class="faq-icon">+</span></button>
+          <div class="faq-a">لا توجد رسوم إعداد لخطة البداية والخطة الاحترافية. أما خطة المؤسسات فتشمل باقات تهيئة
+            اختيارية مدفوعة تتضمن التدريب وترحيل البيانات وضبط الإعدادات المخصصة.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section"
+    style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('../assets/images/warehouse_team.jpg') center/cover fixed;">
+    <div class="container">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.75rem,4vw,2.5rem); font-weight:800; color:#fff; margin-bottom:1rem;">ابدأ تجربتك
+          المجانية اليوم</h2>
+        <p
+          style="color:rgba(255,255,255,0.7); font-size:1.05rem; margin-bottom:2rem; max-width:480px; margin-left:auto; margin-right:auto;">
+          14 يومًا مجانًا بدون بطاقة ائتمان. جهّز فريقك بالكامل للعمل خلال أقل من ساعة.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="http://localhost:5173" class="btn btn-primary btn-lg">ابدأ التجربة المجانية</a>
+          <a href="contact.html" class="btn btn-outline btn-lg">تحدث إلى المبيعات</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div><span class="nav-logo-text">Tiles <span>WMS</span></span>
+        </a>
+        <p>نظام إدارة المستودعات الكامل المصمم خصيصًا لقطاع البلاط والسيراميك في الهند.</p>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;"><span class="badge badge-blue">متوافق مع
+            GST</span><span class="badge badge-green">جاهز للسوق الهندية</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>المنتج</h4><a href="features.html">الميزات</a><a href="pricing.html">الأسعار</a><a href="customers.html">قصص
+          النجاح</a><a href="http://localhost:8080/login?force=true">تسجيل الدخول</a>
+      </div>
+      <div class="footer-col">
+        <h4>الشركة</h4><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a><a href="#">المدونة</a><a
+          href="#">الوظائف</a>
+      </div>
+      <div class="footer-col">
+        <h4>الدعم</h4><a href="#">التوثيق</a><a href="#">مركز المساعدة</a><a href="contact.html">تحدث إلى المبيعات</a><a
+          href="#">مرجع API</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Tiles WMS. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:1rem;"><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">سياسة الخصوصية</a><a href="#"
+          style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">شروط الخدمة</a></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/shared.js"></script>
+</body>
+
+</html>

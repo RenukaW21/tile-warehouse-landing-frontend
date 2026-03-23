@@ -1,331 +1,442 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تواصل معنا - Tiles WMS</title>
-  <meta name="description" content="تواصل مع فريق Tiles WMS لطلب عرض توضيحي أو الاستفسار عن الأسعار أو الحصول على الدعم." />
+  <title>Contact Us — Tiles WMS</title>
+  <meta name="description"
+    content="Get in touch with the Tiles WMS team. Talk to sales, request a demo, or get support for your tiles warehouse management system." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/shared.css" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
-      <span class="nav-logo-text">Tiles <span>WMS</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="features.html">الميزات</a></li>
-      <li><a href="pricing.html">الأسعار</a></li>
-      <li><a href="customers.html">العملاء</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="contact.html">تواصل معنا</a></li>
-      <li><a href="http://localhost:8080/login?force=true" class="btn-login">تسجيل الدخول</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-      <a href="features.html">الميزات</a>
-      <a href="pricing.html">الأسعار</a>
-      <a href="customers.html">العملاء</a>
-      <a href="about.html">من نحن</a>
-      <a href="contact.html">تواصل معنا</a>
-      <a href="http://localhost:8080/login" class="btn-login-mobile">تسجيل الدخول</a>
-  </div>
-</nav>
-
-<section class="hero-bg" style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
-  <div class="hero-mesh"></div>
-  <div class="container" style="position:relative;">
-    <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;">تواصل معنا</div>
-    <h1 style="font-size:clamp(2rem,4.5vw,3.1rem); font-weight:800; color:#fff; margin-bottom:1.1rem; line-height:1.2;">يسعدنا <span style="color:#60a5fa;">الاستماع إليك</span></h1>
-    <p style="color:rgba(255,255,255,0.72); font-size:1.1rem; max-width:580px; margin:0 auto;">سواء كنت تريد بدء التجربة المجانية أو طلب عرض مخصص أو تحتاج إلى مساعدة، فريقنا جاهز لدعمك.</p>
-  </div>
-</section>
-
-<section class="section" style="background:#f8fafc; padding-bottom:0;">
-  <div class="container">
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;" class="contact-cards-grid">
-      <div class="card reveal" style="text-align:center; padding:2.25rem 1.75rem;">
-        <div class="card-icon icon-blue" style="margin:0 auto 1rem;"><i class="ph-duotone ph-phone" style="font-size:1.6em;"></i></div>
-        <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">اتصل بنا</h3>
-        <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">تحدث مباشرة مع فريقنا خلال أيام العمل من 9 صباحًا إلى 7 مساءً.</p>
-        <a href="tel:+917940062525" style="color:#3b82f6; font-weight:600; font-size:0.95rem; text-decoration:none;">+91 79 4006 2525</a>
-      </div>
-      <div class="card reveal reveal-delay-1" style="text-align:center; padding:2.25rem 1.75rem;">
-        <div class="card-icon icon-amber" style="margin:0 auto 1rem;"><i class="ph-duotone ph-envelope" style="font-size:1.6em;"></i></div>
-        <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">راسلنا</h3>
-        <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">أرسل استفسارك في أي وقت، وعادة نرد خلال يوم عمل واحد.</p>
-        <span style="color:#3b82f6; font-weight:600; font-size:0.95rem;">chetan.m@elsner.com</span>
-      </div>
-      <div class="card reveal reveal-delay-2" style="text-align:center; padding:2.25rem 1.75rem;">
-        <div class="card-icon icon-green" style="margin:0 auto 1rem;"><i class="ph-duotone ph-chat-circle-dots" style="font-size:1.6em;"></i></div>
-        <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">الدردشة المباشرة</h3>
-        <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">موجودة داخل التطبيق لعملاء الخطط الاحترافية وخطة المؤسسات.</p>
-        <span style="color:#0e9f6e; font-weight:600; font-size:0.875rem;">● متاح الآن</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:#f8fafc;">
-  <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:4rem; align-items:start;" class="contact-main-grid">
-
-      <div class="reveal">
-        <div class="section-label">تحدث إلى المبيعات</div>
-        <h2 class="section-title" style="font-size:2rem; margin-bottom:1rem;">جاهز لتطوير <span>مستودعك؟</span></h2>
-        <p style="color:#64748b; font-size:1rem; line-height:1.8; margin-bottom:2rem;">املاً النموذج وسيتواصل معك أحد خبرائنا خلال 24 ساعة لفهم احتياجاتك وعرض الطريقة الأنسب لاستخدام Tiles WMS.</p>
-
-        <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2.5rem;">
-          <div style="display:flex; align-items:flex-start; gap:1rem;">
-            <div style="width:40px; height:40px; background:rgba(59,130,246,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="ph-duotone ph-target" style="font-size:1.6em;"></i></div>
-            <div>
-              <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">عرض مخصص</div>
-              <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">سنريك كيف يعمل النظام مع فئات منتجاتك وتدفقات عملك الحالية.</div>
-            </div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:1rem;">
-            <div style="width:40px; height:40px; background:rgba(245,158,11,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="ph-duotone ph-lightning" style="font-size:1.6em;"></i></div>
-            <div>
-              <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">تهيئة سريعة</div>
-              <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">معظم العملاء يكونون جاهزين للعمل خلال يوم عمل واحد فقط.</div>
-            </div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:1rem;">
-            <div style="width:40px; height:40px; background:rgba(14,159,110,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="ph-duotone ph-shield-check" style="font-size:1.6em;"></i></div>
-            <div>
-              <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">حديث مباشر وواضح</div>
-              <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">سنساعدك على التقييم بدون أي ضغط أو تعقيد غير ضروري.</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="background:#fff; border-radius:12px; padding:1.5rem; border:1px solid #e2e8f0; box-shadow:0 4px 24px rgba(26,58,92,0.06);">
-          <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">مكتبنا</div>
-          <div style="color:#64748b; font-size:0.875rem; line-height:1.8;">
-            <div style="margin-bottom:0.4rem;">5th Floor, World Center, Ashram Rd, near Dinesh Hall, Shreyas Colony, Navrangpura, Ahmedabad, Gujarat 380009</div>
-            <div style="margin-bottom:0.4rem;">الاثنين إلى الجمعة، 9:00 صباحًا - 7:00 مساءً</div>
-            <div>+91 79 4006 2525</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card reveal reveal-delay-1" style="padding:2.5rem;">
-        <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-weight:700; color:#1a3a5c; margin-bottom:0.4rem;">أرسل لنا رسالة</h3>
-        <p style="color:#64748b; font-size:0.875rem; margin-bottom:2rem;">سنعود إليك خلال يوم عمل واحد.</p>
-        <form id="contactForm" novalidate>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-            <div class="form-group">
-              <label class="form-label" for="firstName">الاسم الأول *</label>
-              <input class="form-control" type="text" id="firstName" name="firstName" placeholder="راميش" required />
-              <div class="form-error" id="firstNameError"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="lastName">اسم العائلة *</label>
-              <input class="form-control" type="text" id="lastName" name="lastName" placeholder="شارما" required />
-              <div class="form-error" id="lastNameError"></div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="email">بريد العمل الإلكتروني *</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="name@company.com" required />
-            <div class="form-error" id="emailError"></div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="phone">رقم الهاتف</label>
-            <input class="form-control" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="company">اسم الشركة / النشاط *</label>
-            <input class="form-control" type="text" id="company" name="company" placeholder="Sharma Tiles Pvt Ltd" required />
-            <div class="form-error" id="companyError"></div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="warehouses">كم عدد المستودعات التي تديرها؟</label>
-            <select class="form-control" id="warehouses" name="warehouses">
-              <option value="" disabled selected>اختر عدد المستودعات</option>
-              <option>مستودع واحد</option>
-              <option>من 2 إلى 5 مستودعات</option>
-              <option>من 6 إلى 10 مستودعات</option>
-              <option>أكثر من 10 مستودعات</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="reason">كيف يمكننا مساعدتك؟ *</label>
-            <select class="form-control" id="reason" name="reason" required>
-              <option value="" disabled selected>اختر الموضوع</option>
-              <option>طلب عرض توضيحي</option>
-              <option>استفسار عن الأسعار</option>
-              <option>دعم فني</option>
-              <option>شراكة أو تكامل</option>
-              <option>أخرى</option>
-            </select>
-            <div class="form-error" id="reasonError"></div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="message">الرسالة *</label>
-            <textarea class="form-control" id="message" name="message" placeholder="أخبرنا باختصار عن نشاطك وما الذي تبحث عنه..." required></textarea>
-            <div class="form-error" id="messageError"></div>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:0.9rem 1.75rem;">
-            إرسال الرسالة
-          </button>
-
-          <p style="text-align:center; color:#94a3b8; font-size:0.78rem; margin-top:1rem; line-height:1.6;">
-            بإرسالك هذا النموذج فإنك توافق على <a href="#" style="color:#3b82f6; text-decoration:none;">سياسة الخصوصية</a>. لن نشارك بياناتك مع أي طرف آخر.
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:#fff;">
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="section-label">ماذا يقول العملاء</div>
-      <h2 class="section-title">موثوق به من <span>شركات البلاط</span> في أنحاء الهند</h2>
-      <p class="section-sub">بعض الأسباب التي تدفع الفرق إلى اختيار Tiles WMS.</p>
-    </div>
-    <div class="testimonial-grid">
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"كان فريق المبيعات سريع الاستجابة وساعدنا على البدء خلال يوم واحد فقط."</p>
-        <div class="testimonial-author"><div class="author-avatar">VK</div><div><div class="author-name">فيجاي كولكارني</div><div class="author-role">Kulkarni Ceramics، بونا</div></div></div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"العرض التوضيحي كان مناسبًا تمامًا لطريقة عملنا، من أحجام البلاط وحتى المخزون المستورد."</p>
-        <div class="testimonial-author"><div class="author-avatar">SM</div><div><div class="author-name">سونيتا ميهتا</div><div class="author-role">Metro Stone & Tiles، ناجبور</div></div></div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"فريق الدعم يفهم قطاع البلاط فعلاً، وهذا يظهر في كل تواصل معهم."</p>
-        <div class="testimonial-author"><div class="author-avatar">AJ</div><div><div class="author-name">أميت جوشي</div><div class="author-role">Joshi Tiles Co.، سورات</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:#f8fafc;">
-  <div class="container" style="max-width:760px;">
-    <div class="text-center reveal">
-      <div class="section-label">الأسئلة الشائعة</div>
-      <h2 class="section-title" style="margin-bottom:0.5rem;">أسئلة <span>شائعة</span></h2>
-      <p class="section-sub">إجابات سريعة قبل التواصل مع الفريق.</p>
-    </div>
-    <div style="margin-top:2.5rem;">
-      <div class="faq-item reveal">
-        <button class="faq-q">متى ستردون على استفساري؟ <span class="faq-icon">+</span></button>
-        <div class="faq-a">نستهدف الرد على جميع الرسائل خلال يوم عمل واحد. وللأمور العاجلة يمكنك الاتصال بنا مباشرة خلال ساعات العمل.</div>
-      </div>
-      <div class="faq-item reveal reveal-delay-1">
-        <button class="faq-q">هل يمكنني الحصول على عرض مناسب لطريقة عملنا؟ <span class="faq-icon">+</span></button>
-        <div class="faq-a">نعم، جميع العروض التوضيحية مخصصة. سنسألك عن المنتجات والمستودعات والتدفقات الحالية قبل الاجتماع.</div>
-      </div>
-      <div class="faq-item reveal reveal-delay-2">
-        <button class="faq-q">كيف أحصل على الدعم إذا كنت عميلاً حاليًا؟ <span class="faq-icon">+</span></button>
-        <div class="faq-a">يمكن لعملائنا الحاليين التواصل عبر الدردشة داخل التطبيق أو البريد الإلكتروني أو الهاتف بحسب الخطة المستخدمة.</div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">هل تقدمون خدمات تهيئة أو تنفيذ؟ <span class="faq-icon">+</span></button>
-        <div class="faq-a">نعم، نوفر إرشادًا في البداية ودعمًا أثناء التهيئة، كما تتضمن خطة المؤسسات خدمات أوسع للتدريب وترحيل البيانات.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section" style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('assets/images/warehouse_operations.png') center/cover fixed;">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1.25rem;">ابدأ اليوم</div>
-      <h2 style="font-size:clamp(1.75rem,4vw,2.75rem); font-weight:800; color:#fff; margin-bottom:1rem;">جاهز لإدارة مستودع أذكى؟</h2>
-      <p style="color:rgba(255,255,255,0.7); font-size:1.05rem; max-width:500px; margin:0 auto 2rem;">ابدأ تجربتك المجانية أو تحدث مع فريقنا، وفي كلتا الحالتين سنساعدك على التحرك بسرعة.</p>
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="http://localhost:8080/login?force=true" class="btn btn-primary btn-lg" style="animation: pulse-glow 2s infinite;">ابدأ التجربة المجانية</a>
-        <a href="#contactForm" class="btn btn-outline btn-lg">أرسل رسالة</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
         <span class="nav-logo-text">Tiles <span>WMS</span></span>
       </a>
-      <p>نظام إدارة المستودعات الكامل المصمم خصيصًا لقطاع البلاط والسيراميك في الهند.</p>
-      <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
-        <span class="badge badge-blue">متوافق مع GST</span>
-        <span class="badge badge-green">جاهز للسوق الهندية</span>
+      <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="http://localhost:8080/login?force=true" class="btn-login">Login →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="customers.html">Customers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="http://localhost:8080/Login?force=true" class="btn-login-mobile">Login →</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero-bg" style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+    <div class="hero-mesh"></div>
+    <div class="container" style="position:relative;">
+      <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;">📬 Get In
+        Touch</div>
+      <h1
+        style="font-size:clamp(2rem,4.5vw,3.1rem); font-weight:800; color:#fff; margin-bottom:1.1rem; line-height:1.2;">
+        We'd love to <span style="color:#60a5fa;">hear from you</span>
+      </h1>
+      <p style="color:rgba(255,255,255,0.72); font-size:1.1rem; max-width:580px; margin:0 auto;">
+        Whether you're ready to start your free trial, want a personalised demo, or need support — our team is here to
+        help.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT CARDS ═══════════════════════════ -->
+  <section class="section" style="background:#f8fafc; padding-bottom:0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;" class="contact-cards-grid">
+
+        <div class="card reveal" style="text-align:center; padding:2.25rem 1.75rem;">
+          <div class="card-icon icon-blue" style="margin:0 auto 1rem;"><i class="ph-duotone ph-phone" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Call Us</h3>
+          <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">
+            Talk directly to our product experts on weekdays 9 AM – 7 PM IST.
+          </p>
+          <a href="tel:+918000000000"
+            style="color:#3b82f6; font-weight:600; font-size:0.95rem; text-decoration:none;">+91 789 456 7890</a>
+        </div>
+
+        <div class="card reveal reveal-delay-1" style="text-align:center; padding:2.25rem 1.75rem;">
+          <div class="card-icon icon-amber" style="margin:0 auto 1rem;"><i class="ph-duotone ph-envelope" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Email Us</h3>
+          <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">
+            Send us a message anytime. We typically respond within one business day.
+          </p>
+          <span
+            style="color:#3b82f6; font-weight:600; font-size:0.95rem;">chetan.m@elsner.com</span>
+        </div>
+
+        <div class="card reveal reveal-delay-2" style="text-align:center; padding:2.25rem 1.75rem;">
+          <div class="card-icon icon-green" style="margin:0 auto 1rem;"><i class="ph-duotone ph-chat-circle-dots" style="font-size:1.6em;"></i></div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#1a3a5c; margin-bottom:0.5rem;">Live Chat</h3>
+          <p style="color:#64748b; font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">
+            Chat with us directly from the app. Available for Professional and Enterprise customers.
+          </p>
+          <span style="color:#0e9f6e; font-weight:600; font-size:0.875rem;">● Online now</span>
+        </div>
+
       </div>
     </div>
-    <div class="footer-col">
-      <h4>المنتج</h4>
-      <a href="features.html">الميزات</a>
-      <a href="pricing.html">الأسعار</a>
-      <a href="customers.html">قصص النجاح</a>
-      <a href="http://localhost:8080/login?force=true">تسجيل الدخول</a>
-    </div>
-    <div class="footer-col">
-      <h4>الشركة</h4>
-      <a href="about.html">من نحن</a>
-      <a href="contact.html">تواصل معنا</a>
-      <a href="#">المدونة</a>
-      <a href="#">الوظائف</a>
-    </div>
-    <div class="footer-col">
-      <h4>الدعم</h4>
-      <a href="#">التوثيق</a>
-      <a href="#">مركز المساعدة</a>
-      <a href="contact.html">تحدث إلى المبيعات</a>
-      <a href="#">مرجع API</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Tiles WMS. جميع الحقوق محفوظة.</span>
-    <div style="display:flex; gap:1rem;">
-      <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">سياسة الخصوصية</a>
-      <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">شروط الخدمة</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="assets/js/shared.js"></script>
+  <!-- ═══════════════════════════ MAIN FORM + INFO ═══════════════════════════ -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:4rem; align-items:start;"
+        class="contact-main-grid">
 
-<style>
-  @media (max-width: 900px) {
-    .contact-main-grid {
-      grid-template-columns: 1fr !important;
-      gap: 2.5rem !important;
+        <!-- LEFT: Info -->
+        <div class="reveal">
+          <div class="section-label"><i class="ph-duotone ph-handshake" style="font-size:1.6em;"></i> Talk to Sales</div>
+          <h2 class="section-title" style="font-size:2rem; margin-bottom:1rem;">
+            Ready to transform<br />your <span>warehouse?</span>
+          </h2>
+          <p style="color:#64748b; font-size:1rem; line-height:1.8; margin-bottom:2rem;">
+            Fill in the form and one of our product specialists will reach out to you within 24 hours. We'll understand
+            your current setup and show you exactly how Tiles WMS can help.
+          </p>
+
+          <!-- What to expect -->
+          <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2.5rem;">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div
+                style="width:40px; height:40px; background:rgba(59,130,246,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+                <i class="ph-duotone ph-target" style="font-size:1.6em;"></i></div>
+              <div>
+                <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">Personalised Demo
+                </div>
+                <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">See Tiles WMS working with your actual
+                  product categories and workflows.</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div
+                style="width:40px; height:40px; background:rgba(245,158,11,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+                <i class="ph-duotone ph-lightning" style="font-size:1.6em;"></i></div>
+              <div>
+                <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">Quick Onboarding
+                </div>
+                <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">Most customers are fully up and running
+                  within a single business day.</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div
+                style="width:40px; height:40px; background:rgba(14,159,110,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+                <i class="ph-duotone ph-shield-check" style="font-size:1.6em;"></i></div>
+              <div>
+                <div style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:0.2rem;">No Pressure</div>
+                <div style="color:#64748b; font-size:0.875rem; line-height:1.6;">No hard selling. Just an honest
+                  conversation about whether we're the right fit.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office Info -->
+          <div
+            style="background:#fff; border-radius:12px; padding:1.5rem; border:1px solid #e2e8f0; box-shadow:0 4px 24px rgba(26,58,92,0.06);">
+            <div
+              style="font-weight:700; color:#1a3a5c; font-size:0.95rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+              <i class="ph-duotone ph-buildings" style="font-size:1.6em;"></i> Our Office
+            </div>
+            <div style="color:#64748b; font-size:0.875rem; line-height:1.8;">
+              <div style="margin-bottom:0.4rem;">5th Floor, World Center, Ashram Rd, near Dinesh Hall, Shreyas Colony, Navrangpura, Ahmedabad, Gujarat 380009</div>
+              <div style="margin-bottom:0.4rem;">🕘 Mon – Fri, 9:00 AM – 7:00 PM IST</div>
+              <div><i class="ph-duotone ph-phone" style="font-size:1.6em;"></i> +91 79 4006 2525</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="card reveal reveal-delay-1" style="padding:2.5rem;">
+          <h3
+            style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-weight:700; color:#1a3a5c; margin-bottom:0.4rem;">
+            Send us a message</h3>
+          <p style="color:#64748b; font-size:0.875rem; margin-bottom:2rem;">We'll get back to you within one business
+            day.</p>
+
+          <form id="contactForm" novalidate>
+
+            <!-- Name row -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name *</label>
+                <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Ramesh" required />
+                <div class="form-error" id="firstNameError"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name *</label>
+                <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Sharma" required />
+                <div class="form-error" id="lastNameError"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Work Email *</label>
+              <input class="form-control" type="email" id="email" name="email" placeholder="ramesh@sharrmatiles.com"
+                required />
+              <div class="form-error" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input class="form-control" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company">Company / Business Name *</label>
+              <input class="form-control" type="text" id="company" name="company" placeholder="Sharma Tiles Pvt Ltd"
+                required />
+              <div class="form-error" id="companyError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="warehouses">How many warehouses do you operate?</label>
+              <select class="form-control" id="warehouses" name="warehouses">
+                <option value="" disabled selected>Select an option</option>
+                <option>1 warehouse</option>
+                <option>2 – 5 warehouses</option>
+                <option>6 – 10 warehouses</option>
+                <option>More than 10 warehouses</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reason">How can we help? *</label>
+              <select class="form-control" id="reason" name="reason" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option>Request a demo</option>
+                <option>Sales enquiry / pricing</option>
+                <option>Technical support</option>
+                <option>Partnership or integration</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error" id="reasonError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea class="form-control" id="message" name="message"
+                placeholder="Tell us a bit about your business and what you're looking for..." required></textarea>
+              <div class="form-error" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+              style="width:100%; justify-content:center; font-size:1rem; padding:0.9rem 1.75rem;">
+              Send Message →
+            </button>
+
+            <p style="text-align:center; color:#94a3b8; font-size:0.78rem; margin-top:1rem; line-height:1.6;">
+              By submitting this form you agree to our <a href="#" style="color:#3b82f6; text-decoration:none;">Privacy
+                Policy</a>. We'll never share your data.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ WHY CUSTOMERS TRUST US ═══════════════════════════ -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label"><i class="ph-duotone ph-chat-circle-dots" style="font-size:1.6em;"></i> What Customers Say</div>
+        <h2 class="section-title">Trusted by <span>200+ tiles businesses</span> across India</h2>
+        <p class="section-sub">Don't just take our word for it. Here's why teams choose Tiles WMS.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"The sales team was super responsive and helped us onboard in a single day. We
+            went from Excel chaos to a fully running WMS within 48 hours."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">VK</div>
+            <div>
+              <div class="author-name">Vijay Kulkarni</div>
+              <div class="author-role">Owner, Kulkarni Ceramics, Pune</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"I sent an enquiry on Friday evening and got a call on Monday morning. The demo
+            was tailored to our exact setup — tiles by size, import vs domestic stock. Impressive."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div>
+              <div class="author-name">Sunita Mehta</div>
+              <div class="author-role">CFO, Metro Stone & Tiles, Nagpur</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"The support team knows the tiles business. When I had questions about GRN
+            workflows, they walked me through best practices specific to our industry. Brilliant."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AJ</div>
+            <div>
+              <div class="author-name">Amit Joshi</div>
+              <div class="author-role">Warehouse Manager, Joshi Tiles Co., Surat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container" style="max-width:760px;">
+      <div class="text-center reveal">
+        <div class="section-label">? FAQ</div>
+        <h2 class="section-title" style="margin-bottom:0.5rem;">Common <span>questions</span></h2>
+        <p class="section-sub">Quick answers before you reach out.</p>
+      </div>
+      <div style="margin-top:2.5rem;">
+        <div class="faq-item reveal">
+          <button class="faq-q">How quickly will you respond to my enquiry? <span class="faq-icon">+</span></button>
+          <div class="faq-a">We aim to respond to all enquiries within one business day. For urgent matters, call us
+            directly on +91 79 4006 2525 between 9 AM and 7 PM IST, Monday to Friday.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">Can I get a demo tailored to my tiles business setup? <span
+              class="faq-icon">+</span></button>
+          <div class="faq-a">Absolutely. All demos are personalised. We'll ask you about your product categories,
+            warehouse layout, and current workflows before the demo so we can show you features that are directly
+            relevant to your business.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">I'm an existing customer — how do I get support? <span
+              class="faq-icon">+</span></button>
+          <div class="faq-a">Existing customers can reach support through the in-app live chat (Professional and
+            Enterprise plans), by email at chetan.m@elsner.com, or by phone for Enterprise plan customers. Please do not
+            use the sales contact form for support requests.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you offer implementation or onboarding services? <span
+              class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. Starter and Professional plans include guided self-serve onboarding plus email
+            support. Enterprise plans include dedicated onboarding sessions, data migration assistance, and on-site
+            training if required. Contact our sales team to discuss your needs.</div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">Can I partner with or integrate into Tiles WMS? <span class="faq-icon">+</span></button>
+          <div class="faq-a">We're open to partnerships, integrations, and reseller arrangements. Select "Partnership or
+            integration" in the contact form and our business development team will get in touch.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CTA ═══════════════════════════ -->
+  <section class="cta-section" style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('assets/images/warehouse_team.jpg') center/cover fixed;">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1.25rem;"><i class="ph-duotone ph-target" style="font-size:1.6em;"></i> Get
+          Started Today</div>
+        <h2 style="font-size:clamp(1.75rem,4vw,2.75rem); font-weight:800; color:#fff; margin-bottom:1rem;">Ready to run
+          a smarter warehouse?</h2>
+        <p style="color:rgba(255,255,255,0.7); font-size:1.05rem; max-width:500px; margin:0 auto 2rem;">
+          Start your 14-day free trial or talk to our team. Either way, we're here to help you move fast.
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="http://localhost:8080/login?force=true" class="btn btn-primary btn-lg"
+            style="animation: pulse-glow 2s infinite;">Start Free Trial →</a>
+          <a href="#contactForm" class="btn btn-outline btn-lg">Send Us a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div>
+          <span class="nav-logo-text">Tiles <span>WMS</span></span>
+        </a>
+        <p>The complete warehouse management system built specifically for India's tiles and ceramics industry.</p>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <span class="badge badge-blue">GST Compliant</span>
+          <span class="badge badge-green">India Ready</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="customers.html">Case Studies</a>
+        <a href="http://localhost:8080/login?force=true">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Documentation</a>
+        <a href="#">Help Center</a>
+        <a href="contact.html">Talk to Sales</a>
+        <a href="#">API Reference</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tiles WMS. All rights reserved.</span>
+      <div style="display:flex; gap:1rem;">
+        <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+
+  <style>
+    @media (max-width: 900px) {
+      .contact-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+
+      .contact-cards-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
 
-    .contact-cards-grid {
-      grid-template-columns: 1fr !important;
+    @media (min-width: 560px) and (max-width: 900px) {
+      .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
-  }
-
-  @media (min-width: 560px) and (max-width: 900px) {
-    .contact-cards-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-  }
-</style>
+  </style>
 
 </body>
+
 </html>
+

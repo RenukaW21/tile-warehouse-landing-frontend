@@ -45,7 +45,7 @@
     const currentPage = getCurrentPage();
     const desktopNav = document.querySelector('.nav-links');
     const mobileMenuRoot = document.getElementById('mobileMenu');
-    const alternateHref = isArabicPage() ? `en/${currentPage}` : `../${currentPage}`;
+    const alternateHref = isArabicPage() ? `../${currentPage}` : `ar/${currentPage}`;
     const alternateLabel = isArabicPage() ? 'English' : '\u0627\u0644\u0639\u0631\u0628\u064a\u0629';
 
     if (desktopNav && !desktopNav.querySelector('.lang-switch')) {
@@ -104,7 +104,7 @@
   }
 
   function syncBrandFavicon() {
-    const iconPath = window.location.pathname.includes('/en/')
+    const iconPath = window.location.pathname.includes('/ar/')
       // ? '../assets/svg/data-warehouse.png'
       // : 'assets/svg/data-warehouse.png';
       ? '../public/favicon.svg'

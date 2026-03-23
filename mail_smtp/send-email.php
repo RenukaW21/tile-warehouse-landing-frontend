@@ -30,6 +30,10 @@ require 'PHPMailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+$envFile = __DIR__ . '/../.env';
+$env = is_file($envFile) ? parse_ini_file($envFile, false, INI_SCANNER_RAW) : [];
+$smtpPassword = trim($env['SMTP_APP_PASSWORD'] ?? '');
+
 $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
 $input = [];
 
@@ -47,7 +51,8 @@ if (stripos($contentType, 'application/json') !== false) {
     }
 
     $input = is_array($decoded) ? $decoded : [];
-} else {
+}
+else {
     $input = $_POST;
 }
 
@@ -55,6 +60,8 @@ $name = trim($input['name'] ?? '');
 $email = trim($input['email'] ?? '');
 $phone = trim($input['phone'] ?? '');
 $company = trim($input['company'] ?? '');
+$warehouses = trim($input['warehouses'] ?? '');
+$reason = trim($input['reason'] ?? '');
 $message = trim($input['message'] ?? '');
 
 if ($name === '' || $email === '' || $message === '') {
@@ -82,6 +89,8 @@ $emailBody = "Name: {$name}\n"
     . "Email: {$email}\n"
     . "Phone: " . ($phone !== '' ? $phone : 'Not provided') . "\n"
     . "Company: " . ($company !== '' ? $company : 'Not provided') . "\n"
+    . "Warehouses: " . ($warehouses !== '' ? $warehouses : 'Not provided') . "\n"
+    . "Reason: " . ($reason !== '' ? $reason : 'Not provided') . "\n"
     . "Message:\n{$message}";
 
 $headers = [
@@ -103,11 +112,15 @@ if ($mailSent) {
 $mail = new PHPMailer(true);
 
 try {
+    if ($smtpPassword === '') {
+        throw new Exception('SMTP_APP_PASSWORD is missing from .env');
+    }
+
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'chetan.m@elsner.com';
-    $mail->Password = 'YOUR_GMAIL_APP_PASSWORD';
+    $mail->Password = $smtpPassword;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
@@ -126,7 +139,8 @@ try {
         'message' => 'Email sent successfully using SMTP fallback',
     ]);
     exit;
-} catch (Exception $e) {
+}
+catch (Exception $e) {
     http_response_code(500);
     echo json_encode([
         'success' => false,

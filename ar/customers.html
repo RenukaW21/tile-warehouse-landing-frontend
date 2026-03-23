@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>العملاء - Tiles WMS</title>
+  <meta name="description" content="اكتشف كيف تستخدم شركات البلاط في الهند Tiles WMS لتطوير عمليات المستودعات." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div><span class="nav-logo-text">Tiles <span>WMS</span></span></a>
+    <ul class="nav-links">
+      <li><a href="features.html">الميزات</a></li>
+      <li><a href="pricing.html">الأسعار</a></li>
+      <li><a href="customers.html">العملاء</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+      <li><a href="http://localhost:8080/login?force=true" class="btn-login">تسجيل الدخول</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="features.html">الميزات</a><a href="pricing.html">الأسعار</a><a href="customers.html">العملاء</a><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a>
+    <a href="http://localhost:8080/login?force=true" class="btn-login-mobile">تسجيل الدخول</a>
+  </div>
+</nav>
+
+<section class="hero-bg" style="padding:6rem 1.5rem 4.5rem; text-align:center; background: linear-gradient(135deg, rgba(17,32,56,0.92) 0%, rgba(30,58,95,0.85) 100%), url('../assets/images/warehouse_team.jpg') center/cover no-repeat; border-bottom:1px solid rgba(255,255,255,0.05); box-shadow:inset 0 -20px 40px -10px rgba(0,0,0,0.5);">
+  <div class="hero-mesh"></div>
+  <div class="container" style="position:relative;">
+    <div class="badge badge-blue" style="background:rgba(255,255,255,0.12); color:#fff; margin-bottom:1rem;">قصص العملاء</div>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:#fff; margin-bottom:1rem;">موثوق به من شركات البلاط<br /><span style="color:#60a5fa;">في أنحاء الهند</span></h1>
+    <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:560px; margin:0 auto;">من الموزعين أصحاب المستودع الواحد إلى الشبكات متعددة المدن، يساعد Tiles WMS الفرق على العمل بدقة وسرعة أكبر.</p>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal"><div class="stat-number" data-counter data-target="200" data-suffix="+">0</div><div class="stat-label">شركة تستخدم النظام</div></div>
+    <div class="stat-item reveal reveal-delay-1"><div class="stat-number" data-counter data-target="50000" data-suffix="+">0</div><div class="stat-label">فاتورة تم إصدارها</div></div>
+    <div class="stat-item reveal reveal-delay-2"><div class="stat-number" data-counter data-target="50" data-prefix="₹" data-suffix="Cr+">0</div><div class="stat-label">إيرادات تمت متابعتها</div></div>
+    <div class="stat-item reveal reveal-delay-3"><div class="stat-number" data-counter data-target="15" data-suffix=" ولاية">0</div><div class="stat-label">مناطق خدمة</div></div>
+  </div>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">المراجعات</div>
+      <h2 class="section-title">ماذا يقول <span>عملاؤنا</span></h2>
+      <p class="section-sub">آراء حقيقية من أصحاب أعمال يعملون يوميًا في قطاع البلاط.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"ساعدنا Tiles WMS على تنظيم ثلاثة مستودعات في جايبور. انخفضت الفروقات في المخزون بشكل شبه كامل وأصبح تجهيز الطلبات أسرع كثيرًا."</p>
+        <div class="testimonial-author"><div class="author-avatar">RS</div><div><div class="author-name">راميش شارما</div><div class="author-role">Sharma Tiles Pvt Ltd، جايبور</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"تقارير GST وحدها وفرت علينا يومين كاملين من العمل كل شهر. أصبح بإمكاننا إرسال الفواتير ومتابعة الذمم بسرعة كبيرة."</p>
+        <div class="testimonial-author"><div class="author-avatar">PG</div><div><div class="author-name">بريا غوبتا</div><div class="author-role">Gujarat Tiles Distribution، أحمد آباد</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★☆</div>
+        <p class="testimonial-quote">"انتقلنا من Excel إلى Tiles WMS قبل ستة أشهر. تحسنت سرعة تنفيذ الطلبات بنسبة واضحة وأصبح لدينا رؤية أفضل لكل المواقع."</p>
+        <div class="testimonial-author"><div class="author-avatar">AK</div><div><div class="author-name">أرون كومار</div><div class="author-role">AK Ceramics، حيدر آباد</div></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"ميزة توزيع المخزون على الرفوف قللت الأخطاء اليومية وساعدت الفريق على معرفة المكان الصحيح لكل شحنة واردة."</p>
+        <div class="testimonial-author"><div class="author-avatar">MN</div><div><div class="author-name">ماهيش نايك</div><div class="author-role">Naik Ceramic Works، بونا</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"جمع أوامر الشراء وGRN ومدفوعات الموردين في مكان واحد غيّر طريقة عملنا بالكامل."</p>
+        <div class="testimonial-author"><div class="author-avatar">SJ</div><div><div class="author-name">سونيتا جوشي</div><div class="author-role">Joshi Tiles & Marble، مومباي</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"لدينا خمسة مستودعات، والنظام يمنحنا رؤية لحظية لكل موقع. التحويلات بين المستودعات أصبحت أسهل بكثير."</p>
+        <div class="testimonial-author"><div class="author-avatar">VR</div><div><div class="author-name">فيجاي راجان</div><div class="author-role">Rajan Tiles، تشيناي</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" style="background:#f8fafc;">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:2rem;">
+      <p style="color:#64748b; font-size:0.95rem; font-weight:500;">موثوق به من أبرز شركات البلاط</p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;" class="reveal">
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:0.75rem 1.5rem; font-weight:600; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;">Sharma Tiles</div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:0.75rem 1.5rem; font-weight:600; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;">Gujarat Tiles Co.</div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:0.75rem 1.5rem; font-weight:600; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;">AK Ceramics</div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:0.75rem 1.5rem; font-weight:600; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;">Naik Ceramic Works</div>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:0.75rem 1.5rem; font-weight:600; color:#1a3a5c; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem;">Rajan Tiles</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">دراسة حالة</div>
+      <h2 class="section-title">كيف نمت Gujarat Tiles Co. <span>بثقة أكبر</span></h2>
+    </div>
+    <div class="alt-row reveal" style="align-items:stretch; margin-top:3rem;">
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img src="../assets/images/accounting_ai.jpg" alt="Accounting AI Dashboard" style="width:100%; height:100%; min-height:400px; object-fit:cover; display:block;" />
+      </div>
+      <div style="background:#f8fafc; border-radius:16px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:var(--shadow-lg); display:flex; flex-direction:column;">
+        <div style="background:linear-gradient(135deg,#1a3a5c,#112038); padding:2rem 2.5rem; color:#fff;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.2rem; font-weight:700; margin-bottom:0.75rem;">Gujarat Tiles Co.</div>
+          <div style="opacity:0.75; font-size:0.9rem;">أحمد آباد، غوجارات - 4 مواقع تشغيل</div>
+        </div>
+        <div style="padding:2rem 2.5rem; flex:1; display:flex; flex-direction:column; gap:1.5rem;">
+          <div>
+            <div style="background:#fee2e2; color:#dc2626; padding:0.35rem 0.75rem; border-radius:6px; font-size:0.8rem; font-weight:700; display:inline-block; margin-bottom:0.5rem;">التحدي</div>
+            <p style="color:#374151; font-size:0.9rem; line-height:1.7;">إدارة عدة مستودعات عبر ملفات Excel كانت تسبب فروقات متكررة.</p>
+          </div>
+          <div>
+            <div style="background:#dbeafe; color:#1d4ed8; padding:0.35rem 0.75rem; border-radius:6px; font-size:0.8rem; font-weight:700; display:inline-block; margin-bottom:0.5rem;">الحل</div>
+            <p style="color:#374151; font-size:0.9rem; line-height:1.7;">تم تشغيل Tiles WMS في أربعة مستودعات لتنظيم العمليات بشكل ذكي وتدريب الفريق خلال فترة قصيرة.</p>
+          </div>
+          <div style="display:flex; gap:2rem; margin-top:auto; padding-top:1.5rem; border-top:1px solid #e2e8f0;">
+            <div><div style="font-size:1.8rem; font-weight:800; color:#0e9f6e; font-family:'Plus Jakarta Sans',sans-serif;">98%</div><div style="font-size:0.8rem; color:#64748b;">انخفاض أخطاء المخزون</div></div>
+            <div><div style="font-size:1.8rem; font-weight:800; color:#3b82f6; font-family:'Plus Jakarta Sans',sans-serif;">3x</div><div style="font-size:0.8rem; color:#64748b;">نمو في الإيرادات</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" style="background: linear-gradient(135deg, rgba(17,32,56,0.95), rgba(30,58,95,0.88)), url('../assets/images/warehouse_team.jpg') center/cover fixed;">
+  <div class="container">
+    <div class="reveal">
+      <h2 style="font-size:clamp(1.75rem,4vw,2.5rem); font-weight:800; color:#fff; margin-bottom:1rem;">انضم إلى مئات العملاء الراضين</h2>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.05rem; margin-bottom:2rem; max-width:520px; margin-left:auto; margin-right:auto;">ابدأ تجربتك المجانية لمدة 14 يومًا اليوم، وجرّب الفرق بنفسك.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="http://localhost:8080/login?force=true" class="btn btn-primary btn-lg">ابدأ التجربة المجانية</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">تحدث إلى المبيعات</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="ph-duotone ph-factory" style="font-size:1.6em;"></i></div><span class="nav-logo-text">Tiles <span>WMS</span></span></a><p>نظام إدارة المستودعات الكامل المصمم خصيصًا لقطاع البلاط والسيراميك في الهند.</p><div style="margin-top:1rem; display:flex; gap:0.5rem;"><span class="badge badge-blue">متوافق مع GST</span><span class="badge badge-green">جاهز للسوق الهندية</span></div></div>
+    <div class="footer-col"><h4>المنتج</h4><a href="features.html">الميزات</a><a href="pricing.html">الأسعار</a><a href="customers.html">قصص النجاح</a><a href="http://localhost:8080/login?force=true">تسجيل الدخول</a></div>
+    <div class="footer-col"><h4>الشركة</h4><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a><a href="#">المدونة</a><a href="#">الوظائف</a></div>
+    <div class="footer-col"><h4>الدعم</h4><a href="#">التوثيق</a><a href="#">مركز المساعدة</a><a href="contact.html">تحدث إلى المبيعات</a><a href="#">مرجع API</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Tiles WMS. جميع الحقوق محفوظة.</span><div style="display:flex;gap:1rem;"><a href="#" style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">سياسة الخصوصية</a><a href="#" style="color:rgba(255,255,255,0.45);font-size:0.8rem;text-decoration:none;">شروط الخدمة</a></div></div>
+</footer>
+
+<script src="../assets/js/shared.js"></script>
+</body>
+</html>
