@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium WMS - Next-Gen Warehouse Management</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B132B',
+              blue: '#1C2541',
+              accent: '#3A506B',
+              cyan: '#00F0FF',
+              purple: '#8A2BE2',
+              orange: '#FF6B35',
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-slow': 'float 8s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { opacity: 1, filter: 'drop-shadow(0 0 15px rgba(0, 240, 255, 0.5))' },
+              '50%': { opacity: .7, filter: 'drop-shadow(0 0 25px rgba(0, 240, 255, 0.8))' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles for Effects that Tailwind doesn't do natively easily -->
+  <style>
+    body {
+      background-color: #050b14;
+      color: #e2e8f0;
+    }
+    
+    .glassmorphism {
+      background: rgba(28, 37, 65, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-card {
+      background: linear-gradient(145deg, rgba(28,37,65,0.6) 0%, rgba(11,19,43,0.8) 100%);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 240, 255, 0.3);
+      box-shadow: 0 20px 40px -10px rgba(0, 240, 255, 0.15);
+    }
+
+    .btn-glow {
+      background: linear-gradient(90deg, #00F0FF 0%, #0080FF 100%);
+      color: #050b14;
+      font-weight: 700;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(90deg, #00F0FF, #8A2BE2, #00F0FF);
+      z-index: -1;
+      border-radius: inherit;
+      filter: blur(12px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .btn-glow:hover::before {
+      opacity: 0.8;
+      animation: pulse-glow 2s linear infinite;
+    }
+
+    .badge-gradient {
+      background: linear-gradient(90deg, rgba(138, 43, 226, 0.2), rgba(0, 240, 255, 0.2));
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: #00F0FF;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #00F0FF, #8A2BE2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .bg-mesh {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(138, 43, 226, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(0, 240, 255, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(255, 107, 53, 0.05) 0px, transparent 50%);
+      z-index: -2;
+    }
+    
+    .grid-pattern {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-size: 50px 50px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      z-index: -1;
+      mask-image: linear-gradient(to bottom, transparent, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    }
+  </style>
+</head>
+
+<body class="font-body overflow-x-hidden antialiased selection:bg-brand-cyan selection:text-brand-navy">
+
+  <!-- Background Ambience -->
+  <div class="fixed inset-0 pointer-events-none z-[-2]">
+    <div class="bg-mesh"></div>
+    <div class="grid-pattern"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 transition-all duration-300 glassmorphism py-4 px-6 md:px-12 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center text-white shadow-[0_0_15px_rgba(0,240,255,0.4)] group-hover:scale-105 transition-transform">
+          <i class="ph-bold ph-cube text-xl"></i>
+        </div>
+        <span class="font-heading font-bold text-2xl tracking-tight text-white">Nova<span class="text-brand-cyan">WMS</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-gray-300 hover:text-white font-medium transition-colors">Features</a>
+        <a href="#compare" class="text-gray-300 hover:text-white font-medium transition-colors">Compare</a>
+        <a href="#pricing" class="text-gray-300 hover:text-white font-medium transition-colors">Pricing</a>
+      </div>
+      
+      <a href="#demo" class="btn-glow px-6 py-2.5 rounded-full font-heading tracking-wide shadow-lg hover:-translate-y-0.5 transition-transform inline-block text-sm md:text-base">
+        Book Demo
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-40 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden min-h-screen flex flex-col justify-center">
+    <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center z-10">
+      
+      <!-- Hero Text -->
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-gradient font-medium text-sm mb-6 animate-fade-in-up">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
+          </span>
+          Next-Generation Warehouse Intelligence
+        </div>
+        
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+          Manage Inventory <br>
+          <span class="gradient-text">At the Speed of AI</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
+          Transform your warehouse with an intelligent, highly-customizable system built for SMBs. Ditch the rigid legacy software and embrace the future.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#demo" class="btn-glow px-8 py-4 rounded-full font-heading text-lg text-center flex items-center justify-center gap-2 hover:scale-105 transition-transform animate-pulse-glow">
+            Start Free Trial <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#features" class="glassmorphism px-8 py-4 rounded-full font-heading text-lg text-white text-center hover:bg-white/10 transition-colors">
+            Explore Features
+          </a>
+        </div>
+      </div>
+      
+      <!-- Hero Visuals -->
+      <div class="relative w-full h-full lg:h-[600px] flex items-center justify-center animate-float">
+        <!-- Main Dashboard Card -->
+        <div class="glassmorphism rounded-2xl w-full max-w-lg p-2 relative z-20 border border-brand-cyan/20 shadow-[0_0_50px_rgba(0,240,255,0.1)] transform rotate-y-[-10deg] rotate-x-[5deg] perspective-1000">
+          <div class="bg-[#0B132B] rounded-xl overflow-hidden border border-white/5">
+            <!-- Mac header -->
+            <div class="h-8 bg-white/5 border-b border-white/5 flex items-center px-4 gap-2">
+              <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <!-- Mock Content -->
+            <div class="p-4 grid grid-cols-2 gap-4">
+              <div class="col-span-2 bg-brand-accent/20 h-32 rounded-lg border border-white/5 flex flex-col justify-end p-4 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-cyan/20 to-transparent"></div>
+                <div class="text-brand-cyan text-sm font-bold mb-1">Live Stock Flow</div>
+                <div class="w-full h-12 bg-gradient-to-r from-brand-purple to-brand-cyan rounded-md opacity-50 blur-sm"></div>
+              </div>
+              <div class="bg-brand-accent/20 h-24 rounded-lg border border-white/5 p-3 flex flex-col justify-between">
+                <div class="text-xs text-gray-400">Total Items</div>
+                <div class="text-2xl font-bold text-white">12,408</div>
+              </div>
+              <div class="bg-brand-accent/20 h-24 rounded-lg border border-white/5 p-3 flex flex-col justify-between">
+                <div class="text-xs text-gray-400">Pending Orders</div>
+                <div class="text-2xl font-bold text-brand-orange">84</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute -right-8 top-12 glassmorphism p-4 rounded-xl z-30 animate-float-slow border border-brand-purple/30 shadow-[0_0_30px_rgba(138,43,226,0.2)] flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-purple">
+            <i class="ph-fill ph-robot text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xs text-gray-400">AI Assistant</div>
+            <div class="text-sm font-bold text-white">"Stock levels optimized."</div>
+          </div>
+        </div>
+        
+        <div class="absolute -left-4 bottom-24 glassmorphism p-4 rounded-xl z-30 animate-float border border-brand-orange/30 shadow-[0_0_30px_rgba(255,107,53,0.2)] flex items-center gap-3" style="animation-delay: 1s;">
+          <div class="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange">
+            <i class="ph-fill ph-warning-circle text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xs text-gray-400">Damage Tracking</div>
+            <div class="text-sm font-bold text-white">1 item marked damaged</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Designed to <span class="gradient-text">Dominate</span></h2>
+        <p class="text-gray-400 text-lg">Everything you need to run an intelligent warehouse, packed into a beautiful, lightning-fast interface.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Feature 1 -->
+        <div class="glass-card p-8 rounded-2xl group">
+          <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex items-center justify-center text-brand-purple mb-6 group-hover:scale-110 group-hover:bg-brand-purple group-hover:text-white transition-all shadow-[0_0_20px_rgba(138,43,226,0.1)]">
+            <i class="ph-duotone ph-robot text-3xl"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">AI Chatbot</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Ask your system questions in plain English. Get instant answers about stock, orders, and ETA without clicking through menus.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="glass-card p-8 rounded-2xl group">
+          <div class="w-14 h-14 rounded-xl bg-brand-cyan/20 flex items-center justify-center text-brand-cyan mb-6 group-hover:scale-110 group-hover:bg-brand-cyan group-hover:text-brand-navy transition-all shadow-[0_0_20px_rgba(0,240,255,0.1)]">
+            <i class="ph-duotone ph-package text-3xl"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Smart Inventory</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Real-time rack tracking with interactive visuals. Never lose a product again with our highly accurate location assignment logic.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="glass-card p-8 rounded-2xl group">
+          <div class="w-14 h-14 rounded-xl bg-brand-orange/20 flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all shadow-[0_0_20px_rgba(255,107,53,0.1)]">
+            <i class="ph-duotone ph-chart-polar text-3xl"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Custom Reports</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Build and schedule advanced reports on the fly. Focus on the metrics that matter most to your specific operations.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="glass-card p-8 rounded-2xl group">
+          <div class="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all shadow-[0_0_20px_rgba(34,197,94,0.1)]">
+            <i class="ph-duotone ph-lightning text-3xl"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Fast Setup</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Deploys in days, not months. Import your data via CSV, invite your team, and start tracking immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section id="compare" class="py-24 px-6 relative border-y border-white/5 bg-gradient-to-b from-transparent to-[#050b14]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Our WMS vs <span class="text-gray-500">Traditional Systems</span></h2>
+        <p class="text-gray-400 text-lg">Why SMBs are dumping slow, expensive legacy software for our agile platform.</p>
+      </div>
+      
+      <div class="overflow-x-auto pb-8">
+        <table class="w-full min-w-[800px] border-collapse">
+          <thead>
+            <tr>
+              <th class="p-5 text-left border-b border-white/10 text-gray-400 font-medium">Core Features</th>
+              <th class="p-5 text-center border-b-2 border-brand-cyan bg-brand-cyan/5 rounded-t-xl text-brand-cyan font-bold text-lg">NovaWMS</th>
+              <th class="p-5 text-center border-b border-white/10 text-gray-500 font-medium">Odoo</th>
+              <th class="p-5 text-center border-b border-white/10 text-gray-500 font-medium">Fishbowl</th>
+              <th class="p-5 text-center border-b border-white/10 text-gray-500 font-medium">Epicor</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm md:text-base">
+            <tr class="hover:bg-white/[0.02] transition-colors border-b border-white/5">
+              <td class="p-5 font-medium text-gray-300">Natural Language AI Chatbot</td>
+              <td class="p-5 text-center bg-brand-cyan/5 text-brand-cyan font-bold">✓ Native Built-in</td>
+              <td class="p-5 text-center text-gray-500">Paid Add-on</td>
+              <td class="p-5 text-center text-red-400/70">✗ No</td>
+              <td class="p-5 text-center text-gray-500">Complex Integration</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors border-b border-white/5">
+              <td class="p-5 font-medium text-gray-300">Deployment Speed</td>
+              <td class="p-5 text-center bg-brand-cyan/5 text-brand-cyan font-bold">Days</td>
+              <td class="p-5 text-center text-gray-500">Weeks to Months</td>
+              <td class="p-5 text-center text-gray-500">Weeks</td>
+              <td class="p-5 text-center text-gray-500">Months to Years</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors border-b border-white/5">
+              <td class="p-5 font-medium text-gray-300">Software Customizability</td>
+              <td class="p-5 text-center bg-brand-cyan/5 text-brand-cyan font-bold">Fully Flexible</td>
+              <td class="p-5 text-center text-gray-500">Requires Code</td>
+              <td class="p-5 text-center text-gray-500">Rigid</td>
+              <td class="p-5 text-center text-gray-500">Highly Complex</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors border-b border-white/5">
+              <td class="p-5 font-medium text-gray-300">User Interface Style</td>
+              <td class="p-5 text-center bg-brand-cyan/5 text-brand-cyan font-bold">Modern Web / Clean</td>
+              <td class="p-5 text-center text-gray-500">Steep Curve</td>
+              <td class="p-5 text-center text-gray-500">Dated / Clunky</td>
+              <td class="p-5 text-center text-gray-500">Enterprise Heavy</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors border-b border-white/5">
+              <td class="p-5 font-medium text-gray-300">Cost Structure for SMBs</td>
+              <td class="p-5 text-center bg-brand-cyan/5 text-brand-cyan font-bold">Low & Transparent</td>
+              <td class="p-5 text-center text-gray-500">High Consulting Fees</td>
+              <td class="p-5 text-center text-gray-500">Moderate</td>
+              <td class="p-5 text-center text-gray-500">Enterprise Pricing</td>
+            </tr>
+            <tr class="hover:bg-white/[0.02] transition-colors">
+              <td class="p-5 font-medium text-gray-300">Advanced Damage Matrix</td>
+              <td class="p-5 text-center bg-brand-cyan/5 border-b-2 border-brand-cyan rounded-b-xl text-brand-cyan font-bold">✓ Yes</td>
+              <td class="p-5 text-center text-gray-500 border-b border-transparent">Basic</td>
+              <td class="p-5 text-center text-gray-500 border-b border-transparent">Basic</td>
+              <td class="p-5 text-center text-gray-500 border-b border-transparent">Add-on</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-purple/20 to-brand-cyan/20 opacity-30 blur-3xl rounded-full translate-y-1/2 scale-150"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10 glass-card p-12 md:p-16 rounded-3xl border border-brand-cyan/30">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Upgrade to the <span class="gradient-text">Smart Warehouse</span></h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Join the future of inventory management today. Scale faster, reduce errors, and save thousands in legacy software costs.</p>
+      <a href="#register" class="btn-glow px-10 py-5 rounded-full font-heading text-xl inline-flex items-center gap-3 hover:scale-105 transition-transform shadow-[0_0_40px_rgba(0,240,255,0.4)]">
+        Book Your Free Demo <i class="ph-bold ph-rocket-launch"></i>
+      </a>
+      <div class="mt-6 flex justify-center items-center gap-6 text-sm text-gray-400">
+        <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-500"></i> No Credit Card </span>
+        <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-500"></i> 14-Day Free Trial</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Layout -->
+  <footer class="border-t border-white/5 pt-16 pb-8 px-6 bg-[#03060b]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center text-white">
+          <i class="ph-bold ph-cube"></i>
+        </div>
+        <span class="font-heading font-bold text-xl text-white">Nova<span class="text-brand-cyan">WMS</span></span>
+      </div>
+      <div class="text-gray-500 text-sm">
+        &copy; 2026 NovaWMS. Designed for the Future.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

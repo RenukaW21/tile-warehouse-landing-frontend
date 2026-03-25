@@ -3,7 +3,7 @@
    Design: Navy + Blue + Amber | Plus Jakarta Sans + Inter
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,7 +18,7 @@ body {
 body.ajax-loading {
   cursor: progress;
 }
-h1,h2,h3,h4,h5,h6 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; line-height: 1.25; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', system-ui, sans-serif; line-height: 1.25; }
 
 html[lang="ar"] body {
   direction: rtl;
