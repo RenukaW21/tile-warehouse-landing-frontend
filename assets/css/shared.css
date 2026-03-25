@@ -517,20 +517,22 @@ html[lang="ar"] .faq-q {
 .hero-image-wrap {
   position: relative;
   border-radius: 12px;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
   border: 1px solid rgba(255,255,255,0.12);
-  transform: perspective(1200px) rotateY(-8deg) rotateX(4deg) translateY(0);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.3, 1);
   transform-style: preserve-3d;
 }
 .hero-image-wrap:hover {
-  transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+  transform: translateY(-20px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
 }
 html[lang="ar"] .hero-image-wrap {
-  transform: perspective(1200px) rotateY(8deg) rotateX(4deg) translateY(0);
+  transform: translateY(0);
 }
 html[lang="ar"] .hero-image-wrap:hover {
-  transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+  transform: translateY(-20px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
 }
 
 /* Massive Centered Hero Dashboard (SaaS Aesthetic) */
